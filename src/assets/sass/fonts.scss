@@ -1,0 +1,10 @@
+$ah-title: "Playfair Display", serif;
+$ah-header: "Libre Franklin", sans-serif;
+$ah-body: "Martel", serif;
+
+// initial variables (see https://github.com/jgthms/bulma/blob/master/sass/utilities/initial-variables.sass)
+$family-sans-serif: $ah-header;
+
+// derived variables (see https://github.com/jgthms/bulma/blob/master/sass/utilities/derived-variables.sass)
+$family-primary: $ah-body;
+$family-secondary: $ah-header;

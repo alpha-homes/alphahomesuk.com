@@ -1,0 +1,33 @@
+$ahdark: rgba(40, 40, 40, 1);
+$ahgreen: rgba(149, 198, 35, 1);
+$ahyellow: rgba(255, 200, 87, 1);
+$ahred: rgba(252, 68, 15, 1);
+$ahblue: rgba(56, 174, 204, 1);
+
+$black: hsl(0, 0%, 4%) !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 20%) !default;
+$grey: hsl(0, 0%, 40%) !default;
+$grey-light: hsl(0, 0%, 71%) !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$orange: hsl(14, 100%, 53%) !default;
+$yellow: $ahyellow;
+$green: $ahgreen;
+$turquoise: hsl(171, 100%, 41%) !default;
+$cyan: $ahblue;
+$blue: hsl(217, 71%, 53%) !default;
+$purple: hsl(271, 100%, 71%) !default;
+$red: $ahred;
+
+$primary: $turquoise !default;
+
+$light: $white-ter !default;
+$dark: $grey-darker !default;
