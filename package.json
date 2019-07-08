@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "buefy": "^0.7.8",
+    "bulmaswatch": "^0.7.2",
     "gridsome": "^0.6.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0"

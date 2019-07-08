@@ -1,15 +1,10 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
-    </header>
-    <slot />
+  <div>
+    <Navbar />
+    <b-section>
+      <slot />
+    </b-section>
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +16,15 @@ query {
 }
 </static-query>
 
-<style lang="sass">
-@import "~bulma/bulma.sass"
+<script>
+import Navbar from "~/components/Navbar.vue";
+export default {
+  components: {
+    Navbar
+  }
+};
+</script>
+
+<style lang="scss">
+@import "~/assets/sass/style.scss";
 </style>

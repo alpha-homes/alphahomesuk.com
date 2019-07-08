@@ -1,33 +1,40 @@
 <template>
   <Layout>
-    
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container content">
+          <h1 class="title">Primary bold title</h1>
+          <h2 class="subtitle">Primary bold subtitle</h2>
+          <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="columns">
+        <div class="column is-12">
+          <section class="container content">
+            <h1>Welcome</h1>
+            <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings. Mobile action points are becoming senior milestone experts. So we can hit the ground running, we will be iteratively synergising every industry leader in our space. Our Company-Wide Silo solution offers core competencies a suite of best-of-breed offerings.</p>
+            <h2>Best Practices</h2>
+            <p>Is your best practice prepared for end-to-end enterprise growth? Reliably integrating globally long-term stacks is crucial to our actionable cloud.</p>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+            <h2>Stakeholders</h2>
+            <p>Our core asset development lifecycle enables corporate, mission critical stakeholders.</p>
+          </section>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Hello, world!"
   }
-}
+};
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
 </style>

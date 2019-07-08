@@ -1,8 +1,15 @@
-$ahdark: rgba(40, 40, 40, 1);
-$ahgreen: rgba(149, 198, 35, 1);
-$ahyellow: rgba(255, 200, 87, 1);
-$ahred: rgba(252, 68, 15, 1);
-$ahblue: rgba(56, 174, 204, 1);
+@import "~bulma/sass/utilities/_all";
+
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+$ah-blue: hsl(204, 45%, 17%);
+$ah-blue-invert: findColorInvert($ah-blue);
+$ah-turquoise: hsl(160, 35%, 38%);
+$ah-green: hsl(60, 51%, 48%);
+$ah-yellow: hsl(42, 90%, 68%);
+$ah-red: hsl(7, 73%, 53%);
+$ah-cyan: hsl(177, 85%, 40%);
 
 $black: hsl(0, 0%, 4%) !default;
 $black-bis: hsl(0, 0%, 7%) !default;
@@ -19,15 +26,63 @@ $white-bis: hsl(0, 0%, 98%) !default;
 $white: hsl(0, 0%, 100%) !default;
 
 $orange: hsl(14, 100%, 53%) !default;
-$yellow: $ahyellow;
-$green: $ahgreen;
-$turquoise: hsl(171, 100%, 41%) !default;
-$cyan: $ahblue;
-$blue: hsl(217, 71%, 53%) !default;
+$yellow: $ah-yellow;
+$green: $ah-green;
+$turquoise: $ah-turquoise;
+$cyan: $ah-cyan;
+$blue: $ah-blue;
 $purple: hsl(271, 100%, 71%) !default;
-$red: $ahred;
+$red: $ah-red;
 
-$primary: $turquoise !default;
+$primary: $turquoise;
 
 $light: $white-ter !default;
 $dark: $grey-darker !default;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "twitter": (
+    $twitter,
+    $twitter-invert
+  ),
+  "primary-dark": (
+    $ah-blue,
+    $ah-blue-invert
+  )
+);
