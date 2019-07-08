@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+      <a class="navbar-item navbar-logo-item" href="/">
+        <LogoLong class="navbar-logo" />
       </a>
 
       <a
@@ -52,7 +52,22 @@
 </template>
 
 <script>
+import LogoLong from "~/assets/img/logo/logo-full-transparent.svg";
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  components: {
+    LogoLong
+  }
 };
 </script>
+
+<style lang="scss">
+.navbar-item.navbar-logo-item {
+  padding: 0;
+}
+.navbar-logo {
+  width: auto;
+  height: 48px;
+}
+</style>
+

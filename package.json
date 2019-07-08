@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "bulma": "^0.7.5",
-    "style-resources-loader": "^1.2.1"
+    "style-resources-loader": "^1.2.1",
+    "svg-to-vue-component": "^0.3.8"
   }
 }
