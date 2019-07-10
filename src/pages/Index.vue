@@ -1,12 +1,14 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <section class="hero is-medium is-primary is-bold">
+    <section class="hero is-medium is-primary is-bold is-fullheight has-carousel">
       <div class="hero-body">
-        <div class="container content">
-          <h1 class="title">Primary bold title</h1>
-          <h2 class="subtitle">Primary bold subtitle</h2>
-          <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings.</p>
+        <div class="hero-carousel">
+          <div class="container content">
+            <h1 class="title">Primary bold title</h1>
+            <h2 class="subtitle">Primary bold subtitle</h2>
+            <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings.</p>
+          </div>
         </div>
       </div>
     </section>

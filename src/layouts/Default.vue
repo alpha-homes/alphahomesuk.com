@@ -1,9 +1,9 @@
 <template>
   <div>
     <Navbar />
-    <b-section>
+    <section>
       <slot />
-    </b-section>
+    </section>
     <Footer />
   </div>
 </template>

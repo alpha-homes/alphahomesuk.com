@@ -17,17 +17,27 @@ $link-focus-border: $primary;
 @import "./lux-custom/_variables.scss";
 @import "./lux-custom/_overrides.scss";
 @import "~buefy/src/scss/buefy";
+@import "../../../node_modules/bulma-carousel/src/sass/index.sass";
 
 h1.title,
-.title.is-1 {
+.title.is-1,
+.content h1 {
   font-family: $ah-title;
   font-weight: 400;
   font-style: normal;
 }
 
 .title,
-.subtitle {
+.subtitle,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   font-family: $ah-header;
   font-weight: 300;
   font-style: oblique;
+}
+.content h2 {
+  font-size: 1.25em;
 }
