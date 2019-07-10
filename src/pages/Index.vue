@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <section class="hero is-medium is-primary is-bold">
+    <section class="hero is-medium is-primary is-bold is-fullheight has-carousel">
       <div class="hero-body">
         <div class="container content">
           <h1 class="title">Primary bold title</h1>
@@ -29,6 +29,12 @@
 </template>
 
 <script>
+import bulmaCarousel from "../../node_modules/bulma-carousel/dist/js/bulma-carousel.js";
+bulmaCarousel.attach("#carousel-demo", {
+  slidesToScroll: 1,
+  slidesToShow: 1
+});
+
 export default {
   metaInfo: {
     title: "Hello, world!"
