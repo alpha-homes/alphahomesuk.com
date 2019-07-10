@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop -p 1337",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "now-build": "npm run build"
   },
   "dependencies": {
     "buefy": "^0.7.8",
