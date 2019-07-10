@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <nav class="navbar ah-navbar is-primary-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item navbar-logo-item" href="/">
         <LogoLong class="navbar-logo" />
@@ -63,11 +63,15 @@ export default {
 
 <style lang="scss">
 .navbar-item.navbar-logo-item {
-  padding: 0;
+  // padding: 0;
 }
 .navbar-logo {
   width: auto;
-  height: 48px;
+  height: 36px;
+}
+.ah-navbar {
+  font-family: $ah-header;
+  font-size: 0.9em;
 }
 </style>
 
