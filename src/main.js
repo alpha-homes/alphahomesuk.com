@@ -3,6 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
+import bulmaCarousel from "../node_modules/bulma-carousel/dist/js/bulma-carousel.js";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -11,8 +12,7 @@ export default function(Vue, { router, head, isClient }) {
   // icons
   head.link.push({
     rel: "stylesheet",
-    href:
-      "https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"
+    href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
   });
 
   // bulma
@@ -24,5 +24,9 @@ export default function(Vue, { router, head, isClient }) {
       "https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Martel:200,300,400,600,700,800,900|Playfair+Display:400,400i,700&display=swap"
   });
 
-  Vue.use(Buefy);
+  head.htmlAttrs = { class: "has-navbar-fixed-top" };
+
+  Vue.use(Buefy, {
+    defaultIconPack: "fas"
+  });
 }
