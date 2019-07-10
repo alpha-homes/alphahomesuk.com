@@ -1,6 +1,6 @@
 {
   "name": "alphahomes",
-  "alias": "alphahomes.now.sh", // or ["aliasOne", "aliasTwo"]
+  "alias": "alphahomes.now.sh",
   "version": 2,
   "builds": [
     {
