@@ -29,12 +29,6 @@
 </template>
 
 <script>
-// import bulmaCarousel from "../../node_modules/bulma-carousel/dist/js/bulma-carousel.js";
-// bulmaCarousel.attach("#carousel-demo", {
-//   slidesToScroll: 1,
-//   slidesToShow: 1
-// });
-
 export default {
   metaInfo: {
     title: "Hello, world!"
