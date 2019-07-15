@@ -3,6 +3,8 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
+import VueGlide from "vue-glide-js";
+import "vue-glide-js/dist/vue-glide.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -28,4 +30,6 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(Buefy, {
     defaultIconPack: "fas"
   });
+
+  Vue.use(VueGlide);
 }

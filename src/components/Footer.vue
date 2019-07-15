@@ -41,7 +41,7 @@
     </div>
 
     <cookie-accept-decline
-      :elementId="cookie-accept-decline"
+      elementId="cookieacceptdecline"
       :position="'bottom-left'"
       :type="'floating'"
       :disableDecline="true"

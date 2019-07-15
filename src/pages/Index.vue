@@ -3,11 +3,15 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <section class="hero is-medium is-primary is-bold is-fullheight has-carousel">
       <div class="hero-body">
-        <div class="container content">
-          <h1 class="title">Primary bold title</h1>
-          <h2 class="subtitle">Primary bold subtitle</h2>
-          <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings.</p>
-        </div>
+        <vue-glide type="carousel">
+          <vue-glide-slide v-for="(hero, index) in heroes.length" :key="index">
+            <div class="container content">
+              <h1 class="title">{{hero.title}}</h1>
+              <h2 class="subtitle">{{hero.subtitle}}</h2>
+              <p>{{hero.text}}</p>
+            </div>
+          </vue-glide-slide>
+        </vue-glide>
       </div>
     </section>
     <section class="section">
@@ -29,9 +33,36 @@
 </template>
 
 <script>
+import { Glide, GlideSlide } from "vue-glide-js";
+
 export default {
   metaInfo: {
     title: "Alpha Homes - London Property Specialists Since 2008"
+  },
+  components: {
+    [Glide.name]: Glide,
+    [GlideSlide.name]: GlideSlide
+  },
+  data: function() {
+    return {
+      heroes: [
+        {
+          title: "We are Alpha Homes",
+          subtitle:
+            "We have been serving London's landlords, tenants and agents since 2008",
+          text:
+            "Our World-Class Capability solution offers agile workflows a suite of immersive offerings.",
+          href: "/services"
+        },
+        {
+          title: "Lorem Ipsum",
+          subtitle: "Dolor sit amet.",
+          text:
+            "Praesent finibus porta risus, quis lobortis felis cursus quis. Nam ut sapien.",
+          href: "/lipsum"
+        }
+      ]
+    };
   }
 };
 </script>
