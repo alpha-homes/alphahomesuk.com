@@ -31,7 +31,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Alpha Homes - London Property Specialists Since 2008"
   }
 };
 </script>

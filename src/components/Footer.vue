@@ -39,6 +39,24 @@
         </span>
       </p>
     </div>
+
+    <cookie-accept-decline
+      :elementId="cookie-accept-decline"
+      :position="'bottom-left'"
+      :type="'floating'"
+      :disableDecline="true"
+      :transitionName="'slideFromBottom'"
+      :showPostponeButton="false"
+    >
+      <!-- Optional -->
+      <div
+        slot="message"
+        class="is-family-sans-serif"
+      >We use cookies to ensure you get the best experience on our website.</div>
+
+      <!-- Optional -->
+      <div slot="acceptContent" class="is-family-sans-serif">Okay</div>
+    </cookie-accept-decline>
   </footer>
 </template>
 
@@ -46,10 +64,14 @@
 import RSTLSSLogo from "~/assets/img/rstlss.svg";
 import AlphaHomesLogo from "~/assets/img/logo/logo-full-transparent-dark.svg";
 
+import "vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css";
+import CookieAcceptDecline from "vue-cookie-accept-decline";
+
 export default {
   components: {
     RSTLSSLogo,
-    AlphaHomesLogo
+    AlphaHomesLogo,
+    CookieAcceptDecline
   }
 };
 </script>

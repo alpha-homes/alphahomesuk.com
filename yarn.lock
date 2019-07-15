@@ -7726,6 +7726,11 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
+tiny-cookie@^2.1.2:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tiny-cookie/-/tiny-cookie-2.3.1.tgz#f0ea9fa194f2aed631dcd5e69ac0d6587be928c8"
+  integrity sha512-C4x1e8dHfKf03ewuN9aIZzzOfN2a6QKhYlnHdzJxmmjMTLqcskI20F+EplszjODQ4SHmIGFJrvUUnBMS/bJbOA==
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -8111,6 +8116,13 @@ vue-carousel@^0.18.0:
     global "^4.3.2"
     regenerator-runtime "^0.12.1"
     vue "^2.5.17"
+
+vue-cookie-accept-decline@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/vue-cookie-accept-decline/-/vue-cookie-accept-decline-5.2.3.tgz#418fa3ea5e05ae736eec6e68b1459dba74d8c361"
+  integrity sha512-g4/g6QX53QzuYNY0c0CzVEMFE3Be04iB2xmwCjulBhFN61nVKTgZB0WfLw1DcL/7LXaAu67y81UzzkU+bWHZQw==
+  dependencies:
+    tiny-cookie "^2.1.2"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
