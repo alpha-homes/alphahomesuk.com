@@ -33,15 +33,9 @@
 </template>
 
 <script>
-import { Glide, GlideSlide } from "vue-glide-js";
-
 export default {
   metaInfo: {
     title: "Alpha Homes - London Property Specialists Since 2008"
-  },
-  components: {
-    [Glide.name]: Glide,
-    [GlideSlide.name]: GlideSlide
   },
   data: function() {
     return {
