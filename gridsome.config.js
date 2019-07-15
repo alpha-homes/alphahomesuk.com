@@ -25,14 +25,6 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: "Alpha Homes",
-  icon: {
-    favicon: {
-      src: "./src/android-chrome-512x512.png"
-    },
-    touchicon: {
-      src: "./src/apple-touch-icon.png"
-    }
-  },
   plugins: [],
   chainWebpack(config) {
     // Only convert .svg files that are imported by these files as Vue component

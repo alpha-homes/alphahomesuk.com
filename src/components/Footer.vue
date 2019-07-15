@@ -19,21 +19,23 @@
       </section>
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
-          Forged with
-          <i class="fas fa-heart has-text-danger" alt="love"></i> in the
-          <g-image
-            src="~/assets/img/GB.svg"
-            width="24px"
-            alt="United Kingdom"
-            class="inline-image"
-          />&nbsp;by
-          <RSTLSSLogo
-            id="rstlss-logo"
-            alt="RSTLSS"
-            width="72px"
-            height="auto"
-            class="inline-image"
-          />
+          <a href="https://rstlss.org" class="has-text-grey-dark" target="_blank">
+            Built with
+            <i class="fas fa-heart has-text-danger is-size-6" alt="love"></i> in the
+            <g-image
+              src="~/assets/img/GB.svg"
+              width="22px"
+              alt="United Kingdom"
+              class="inline-image"
+            />&nbsp;by
+            <RSTLSSLogo
+              id="rstlss-logo"
+              alt="RSTLSS"
+              width="72px"
+              height="auto"
+              class="inline-image"
+            />
+          </a>
         </span>
       </p>
     </div>
