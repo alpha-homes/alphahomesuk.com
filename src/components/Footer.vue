@@ -20,7 +20,7 @@
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
           <a href="https://rstlss.org" class="has-text-grey-dark" target="_blank">
-            Built with
+            Hand-crafted with
             <i class="fas fa-heart has-text-danger is-size-6" alt="love"></i> in the
             <g-image
               src="~/assets/img/GB.svg"
