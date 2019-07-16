@@ -3,6 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
+import VueRx from "vue-rx";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -28,4 +29,6 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(Buefy, {
     defaultIconPack: "fas"
   });
+
+  Vue.use(VueRx);
 }

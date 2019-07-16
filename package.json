@@ -15,9 +15,11 @@
     "gridsome": "^0.6.0",
     "lodash": "^4.17.14",
     "node-sass": "^4.12.0",
+    "rxjs": "^6.5.2",
     "sass-loader": "^7.1.0",
     "vue-carousel": "^0.18.0",
-    "vue-cookie-accept-decline": "^5.2.3"
+    "vue-cookie-accept-decline": "^5.2.3",
+    "vue-rx": "^6.2.0"
   },
   "devDependencies": {
     "bulma": "^0.7.5",
