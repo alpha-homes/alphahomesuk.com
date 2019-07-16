@@ -2,17 +2,7 @@
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <section class="hero is-medium is-primary is-bold is-fullheight has-carousel">
-      <div class="hero-body">
-        <vue-glide type="carousel">
-          <vue-glide-slide v-for="(hero, index) in heroes.length" :key="index">
-            <div class="container content">
-              <h1 class="title">{{hero.title}}</h1>
-              <h2 class="subtitle">{{hero.subtitle}}</h2>
-              <p>{{hero.text}}</p>
-            </div>
-          </vue-glide-slide>
-        </vue-glide>
-      </div>
+      <HeroCarousel size="fullheight" :heroes="heroes"/>
     </section>
     <section class="section">
       <div class="columns">
@@ -33,9 +23,14 @@
 </template>
 
 <script>
+import HeroCarousel from "~/components/hero-carousel.vue";
+
 export default {
   metaInfo: {
     title: "Alpha Homes - London Property Specialists Since 2008"
+  },
+  components: {
+    HeroCarousel
   },
   data: function() {
     return {
