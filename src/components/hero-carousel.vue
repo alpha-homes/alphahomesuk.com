@@ -5,16 +5,18 @@
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
-      <div :key="index" class="content container">
-        <h1 class="title">We are Alpha Homes</h1>
-        <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']"/>
-        <p
-          class="text hero-text"
-        >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
+      <div class="hero-body-content">
+        <div :key="index" class="content container">
+          <h1 class="title">We are Alpha Homes</h1>
+          <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']"/>
+          <p
+            class="text hero-text"
+          >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
+        </div>
       </div>
+      <div class="hero-background"></div>
     </div>
 
-    <div class="hero-background"></div>
     <div class="hero-foot"></div>
   </section>
 </template>
@@ -76,9 +78,14 @@ export default {
 @import "../../node_modules/bulma-carousel/src/sass/index.sass";
 @import "./hero-carousel.scss";
 
-.has-vector-illustration .hero-body {
+.has-vector-illustration .hero-body-content {
   z-index: 2;
   // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+  @media screen and (min-width: 600px) {
+    max-width: 600px;
+  }
+  padding-left: 2vw;
+  // text-shadow: 0 3px 4px rgba(0, 0, 0, 0.66);
 }
 
 .has-vector-illustration .hero-background {
@@ -89,10 +96,10 @@ export default {
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -52px;
   right: 0;
   bottom: 0;
-  background-size: 40% auto;
+  background-size: 66% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -101,6 +108,25 @@ export default {
 
 #homepage-hero .hero-text {
   position: relative;
-  top: 36px;
+  top: 72px;
+  @media screen and (max-width: 600px) {
+    font-size: 0.8em;
+    top: 72px;
+  }
+}
+
+#homepage-hero {
+  // background-image: url("../assets/img/photos/party.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 0px;
+  margin-top: -52px;
+
+  .hero-body {
+    // background: rgba(0, 0, 0, 0.5);
+    padding-top: 0px;
+    // margin-top: -52px;
+  }
 }
 </style>
