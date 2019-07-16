@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h2 class="subtitle" v-for="(txt, index) in subtitles" :key="index">{{txt}}</h2>
-  </div>
+  <h2 class="subtitle">Test</h2>
 </template>
 
 <script>

@@ -6,11 +6,8 @@
   >
     <div class="hero-body">
       <div :key="index" class="content container">
-        <h1 class="title">
-          We are
-          <strong>Alpha Homes</strong>
-        </h1>
-        <SubtitleCarousel :subtitles="[hero.subtitle, 'Another one', 'DJ Khaled']"/>
+        <h1 class="title">We are Alpha Homes</h1>
+        <SubtitleCarousel :subtitles="[hero.subtitle]"/>
         <p class="text">{{hero.text}}</p>
         <p>
           {{hero.linkText}}
@@ -84,14 +81,6 @@ export default {
 .has-vector-illustration .hero-body {
   z-index: 2;
   // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
-}
-
-#alphahomes-hero-logo {
-  display: inline-block;
-  width: 320px;
-  height: auto;
-  line-height: 72px;
-  margin: 0;
 }
 
 .has-vector-illustration .hero-background {
