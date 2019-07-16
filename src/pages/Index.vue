@@ -1,9 +1,9 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <section class="hero is-medium is-primary is-bold is-fullheight has-carousel">
-      <HeroCarousel size="fullheight" :heroes="heroes"/>
-    </section>
+
+    <HeroCarousel size="fullheight" :heroes="heroes" />
+
     <section class="section">
       <div class="columns">
         <div class="column is-12">
