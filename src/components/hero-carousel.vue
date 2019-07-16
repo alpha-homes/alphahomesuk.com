@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import bulmaCarousel from "../../node_modules/bulma-carousel/dist/js/bulma-carousel.js";
 import SubtitleCarousel from "~/components/hero/subtitle-carousel.vue";
 
 const carouselOptions = {
@@ -75,7 +74,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../node_modules/bulma-carousel/src/sass/index.sass";
 @import "./hero-carousel.scss";
 
 .has-vector-illustration .hero-body-content {
