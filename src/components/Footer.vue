@@ -4,10 +4,10 @@
       <p id="license">
         <i class="far fa-copyright has-text-grey"></i>
         <span class="year has-text-grey-dark">2019</span>
-        <AlphaHomesLogo
+        <g-image
+          src="~/assets/img/logo/logo-full-transparent-dark.svg"
           id="alphahomes-footer-logo"
           width="180px"
-          height="auto"
           class="inline-image"
           alt="Alpha Homes"
         />
@@ -28,12 +28,12 @@
               alt="United Kingdom"
               class="inline-image"
             />&nbsp;by
-            <RSTLSSLogo
-              id="rstlss-logo"
-              alt="RSTLSS"
+            <g-image
+              src="~/assets/img/rstlss.svg"
               width="72px"
-              height="auto"
+              alt="RSTLSS.org"
               class="inline-image"
+              id="rstlss-logo"
             />
           </a>
         </span>
@@ -61,16 +61,11 @@
 </template>
 
 <script>
-import RSTLSSLogo from "~/assets/img/rstlss.svg";
-import AlphaHomesLogo from "~/assets/img/logo/logo-full-transparent-dark.svg";
-
 import "vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css";
 import CookieAcceptDecline from "vue-cookie-accept-decline";
 
 export default {
   components: {
-    RSTLSSLogo,
-    AlphaHomesLogo,
     CookieAcceptDecline
   }
 };
