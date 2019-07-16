@@ -81,35 +81,34 @@ export default {
 @import "../../node_modules/bulma-carousel/src/sass/index.sass";
 @import "./hero-carousel.scss";
 
-#homepage-hero {
-  .has-vector-illustration .hero-body {
-    z-index: 2;
-    // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
-  }
+.has-vector-illustration .hero-body {
+  z-index: 2;
+  // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+}
 
-  #alphahomes-hero-logo {
-    display: inline-block;
-    width: 320px;
-    height: auto;
-    line-height: 72px;
-    margin: 0;
-  }
+#alphahomes-hero-logo {
+  display: inline-block;
+  width: 320px;
+  height: auto;
+  line-height: 72px;
+  margin: 0;
+}
 
-  .has-vector-illustration .hero-background {
-    margin: 52px 0px 0px;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-size: 40% auto;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-    z-index: 0;
-  }
+.has-vector-illustration .hero-background {
+  background-image: url("../assets/img/home/house-illustration.svg");
+  margin: 52px 0px 0px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 40% auto;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  z-index: 0;
 }
 </style>
