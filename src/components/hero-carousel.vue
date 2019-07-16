@@ -5,9 +5,9 @@
   >
     <div class="hero-body">
       <div :key="index" class="container" :class="[`item-${index}`]">
-        <h1 class="title">{{hero.title || 'Missing Title'}}</h1>
-        <h2 class="subtitle">{{hero.subtitle}}</h2>
-        <p>{{hero.text}}</p>
+        <h1 class="title is-size-1">{{hero.title || 'Missing Title'}}</h1>
+        <h2 class="subtitle is-size-3">{{hero.subtitle}}</h2>
+        <p class="text is-size-5">{{hero.text}}</p>
         <p>
           {{hero.linkText}}
           <a :href="hero.href">{{hero.callToAction}}</a>

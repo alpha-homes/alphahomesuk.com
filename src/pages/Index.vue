@@ -2,7 +2,7 @@
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
-    <HeroCarousel size="fullheight" :heroes="heroes" />
+    <HeroCarousel size="fullheight" :heroes="heroes"/>
 
     <section class="section">
       <div class="columns">
