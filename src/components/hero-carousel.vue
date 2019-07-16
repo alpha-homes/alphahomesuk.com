@@ -7,12 +7,10 @@
     <div class="hero-body">
       <div :key="index" class="content container">
         <h1 class="title">We are Alpha Homes</h1>
-        <SubtitleCarousel :subtitles="[hero.subtitle]"/>
-        <p class="text">{{hero.text}}</p>
-        <p>
-          {{hero.linkText}}
-          <a :href="hero.href">{{hero.callToAction}}</a>
-        </p>
+        <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']"/>
+        <p
+          class="text hero-text"
+        >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
       </div>
     </div>
 
@@ -99,5 +97,10 @@ export default {
   background-position-x: right;
   background-position-y: bottom;
   z-index: 0;
+}
+
+#homepage-hero .hero-text {
+  position: relative;
+  top: 36px;
 }
 </style>

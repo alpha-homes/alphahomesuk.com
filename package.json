@@ -19,7 +19,8 @@
     "sass-loader": "^7.1.0",
     "vue-carousel": "^0.18.0",
     "vue-cookie-accept-decline": "^5.2.3",
-    "vue-rx": "^6.2.0"
+    "vue-rx": "^6.2.0",
+    "vue2-animate": "^2.1.0"
   },
   "devDependencies": {
     "bulma": "^0.7.5",

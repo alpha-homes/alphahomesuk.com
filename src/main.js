@@ -4,6 +4,7 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
 import VueRx from "vue-rx";
+import "vue2-animate/dist/vue2-animate.min.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
