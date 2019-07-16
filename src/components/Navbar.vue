@@ -6,7 +6,7 @@
   >
     <div class="navbar-brand">
       <a class="navbar-item navbar-logo-item" href="/">
-        <LogoLong class="navbar-logo" />
+        <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo"/>
       </a>
 
       <a
@@ -52,7 +52,7 @@
             </a>
             <a class="button is-success" href="mailto:info@alphahomesuk.com">
               <span class="icon">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-comments"></i>
               </span>
               <span>
                 <strong>Contact Us</strong>
@@ -66,12 +66,9 @@
 </template>
 
 <script>
-import LogoLong from "~/assets/img/logo/logo-full-transparent.svg";
 export default {
   name: "Navbar",
-  components: {
-    LogoLong
-  },
+  components: {},
   data() {
     return {
       menuActive: false

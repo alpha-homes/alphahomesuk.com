@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Navbar />
-    <section>
-      <slot />
-    </section>
-    <Footer />
+    <Navbar/>
+
+    <slot/>
+
+    <Footer/>
   </div>
 </template>
 
@@ -18,9 +18,12 @@ query {
 
 <script>
 import Navbar from "~/components/Navbar.vue";
+import Footer from "~/components/Footer.vue";
+
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 };
 </script>
