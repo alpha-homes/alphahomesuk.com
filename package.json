@@ -9,6 +9,7 @@
     "now-build": "npm run build"
   },
   "dependencies": {
+    "@gridsome/source-contentful": "^0.4.0",
     "buefy": "^0.7.8",
     "bulma-carousel": "^4.0.4",
     "bulmaswatch": "^0.7.2",
