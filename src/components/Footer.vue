@@ -11,6 +11,7 @@ query {
       addressLine3
       postcode
       companyNumber
+      businessAddress
   }
 }
 </static-query>
@@ -32,7 +33,7 @@ query {
       <section id="legal" class="has-text-grey is-size-7">
         <p
           id="company-info"
-        >Alpha Homes Ltd (company number {{$static.contentfulBasics.companyNumber }}) incorporated in England and Wales. Registered business address: {{$static.contentfulBasics.addressLine1}}, {{$static.contentfulBasics.addressLine2}}, {{$static.contentfulBasics.addressLine3}}, {{$static.contentfulBasics.postcode }}</p>
+        >ALPHA HOMES LIMITED (company number {{$static.contentfulBasics.companyNumber }}) incorporated in England and Wales. Registered business address: {{$static.contentfulBasics.businessAddress}}.</p>
       </section>
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
