@@ -1,17 +1,19 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-primary has-vector-illustration"
+    class="hero is-primary is-bold has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
       <div class="hero-body-content">
-        <div :key="index" class="content container">
-          <h1 class="title">We are Alpha Homes</h1>
-          <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']"/>
-          <p
-            class="text hero-text"
-          >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
+        <div class="content container">
+          <h1 class="title">
+            <slot name="title"/>
+          </h1>
+          <SubtitleCarousel :subtitles="taglines"/>
+          <p class="text hero-text">
+            <slot name="text"/>
+          </p>
         </div>
       </div>
       <div class="hero-background"></div>
@@ -23,15 +25,6 @@
 
 <script>
 import SubtitleCarousel from "~/components/hero/subtitle-carousel.vue";
-
-const carouselOptions = {
-  autoplay: true,
-  autoplaySpeed: 5000,
-  //infinite: true,
-  // loop: true,
-  navigation: false
-};
-
 /**
  * schema:
  *    int id:
@@ -47,28 +40,10 @@ const carouselOptions = {
  *    string textColor
  */
 export default {
-  name: "hero-carousel",
-  props: ["heroes", "size"],
+  name: "homepage-hero",
+  props: ["size", "taglines"],
   components: {
     SubtitleCarousel
-  },
-  computed: {
-    hero() {
-      return this.heroes[this.currentHeroIndex];
-    }
-  },
-  data() {
-    return {
-      currentHeroIndex: 0
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      const carousels = bulmaCarousel.attach(
-        this.$refs.carouselRef,
-        carouselOptions
-      );
-    });
   }
 };
 </script>
@@ -97,7 +72,7 @@ export default {
   top: -52px;
   right: 0;
   bottom: 0;
-  background-size: 66% auto;
+  background-size: 50% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -106,10 +81,10 @@ export default {
 
 #homepage-hero .hero-text {
   position: relative;
-  top: 72px;
-  @media screen and (max-width: 600px) {
+  top: 100px;
+
+  @media screen and (max-width: 320px) {
     font-size: 0.8em;
-    top: 72px;
   }
 }
 
@@ -124,7 +99,7 @@ export default {
   .hero-body {
     // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    // margin-top: -52px;
+    margin-top: -52px;
   }
 }
 </style>

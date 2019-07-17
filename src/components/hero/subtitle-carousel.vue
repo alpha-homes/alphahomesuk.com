@@ -45,7 +45,7 @@ export default {
     position: absolute;
     left: 0;
     top: 44px;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 320px) {
       top: 80px;
       font-size: 0.8em;
     }
