@@ -7,11 +7,13 @@
     <div class="hero-body">
       <div class="hero-body-content">
         <div class="content container">
-          <h1 class="title">We are Alpha Homes</h1>
-          <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']" />
-          <p
-            class="text hero-text"
-          >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
+          <h1 class="title">
+            <slot name="title" />
+          </h1>
+          <SubtitleCarousel :subtitles="taglines" />
+          <p class="text hero-text">
+            <slot name="text" />
+          </p>
         </div>
       </div>
       <div class="hero-background"></div>
@@ -23,15 +25,6 @@
 
 <script>
 import SubtitleCarousel from "~/components/hero/subtitle-carousel.vue";
-
-const carouselOptions = {
-  autoplay: true,
-  autoplaySpeed: 5000,
-  //infinite: true,
-  // loop: true,
-  navigation: false
-};
-
 /**
  * schema:
  *    int id:
@@ -47,28 +40,10 @@ const carouselOptions = {
  *    string textColor
  */
 export default {
-  name: "hero-carousel",
-  props: ["heroes", "size"],
+  name: "homepage-hero",
+  props: ["size", "taglines"],
   components: {
     SubtitleCarousel
-  },
-  computed: {
-    hero() {
-      return this.heroes[this.currentHeroIndex];
-    }
-  },
-  data() {
-    return {
-      currentHeroIndex: 0
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      // const carousels = bulmaCarousel.attach(
-      //   this.$refs.carouselRef,
-      //   carouselOptions
-      // );
-    });
   }
 };
 </script>
