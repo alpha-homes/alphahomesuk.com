@@ -25,7 +25,18 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: "Alpha Homes",
-  plugins: [],
+  plugins: [
+    {
+      use: "@gridsome/source-contentful",
+      options: {
+        space: "nkx1492d8hke", // required
+        accessToken: "chm5AdZS4mmLjwXPoWS9eL4DrpnkfRb6oGspKa2IQL0", // required
+        host: "cdn.contentful.com",
+        environment: "master",
+        typeName: "Contentful"
+      }
+    }
+  ],
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
