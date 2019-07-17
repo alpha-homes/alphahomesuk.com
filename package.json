@@ -1,6 +1,6 @@
 {
   "name": "alphahomesuk.com",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -9,6 +9,8 @@
     "now-build": "npm run build"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.1.0",
+    "@gridsome/source-contentful": "^0.4.0",
     "buefy": "^0.7.8",
     "bulma-carousel": "^4.0.4",
     "bulmaswatch": "^0.7.2",
