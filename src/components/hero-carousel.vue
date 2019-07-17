@@ -97,7 +97,7 @@ export default {
   top: -52px;
   right: 0;
   bottom: 0;
-  background-size: 66% auto;
+  background-size: 50% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -106,10 +106,10 @@ export default {
 
 #homepage-hero .hero-text {
   position: relative;
-  top: 72px;
-  @media screen and (max-width: 600px) {
+  top: 100px;
+
+  @media screen and (max-width: 320px) {
     font-size: 0.8em;
-    top: 72px;
   }
 }
 
@@ -124,7 +124,7 @@ export default {
   .hero-body {
     // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    // margin-top: -52px;
+    margin-top: -52px;
   }
 }
 </style>
