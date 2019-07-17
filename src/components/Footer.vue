@@ -1,3 +1,20 @@
+<static-query>
+query {
+    contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
+  	  name
+      phone
+      email
+      boroughs
+      tagline
+      addressLine1
+      addressLine2
+      addressLine3
+      postcode
+      companyNumber
+  }
+}
+</static-query>
+
 <template>
   <footer class="footer">
     <div class="content has-text-centered has-text-dark">
@@ -15,7 +32,7 @@
       <section id="legal" class="has-text-grey is-size-7">
         <p
           id="company-info"
-        >Alpha Homes Ltd (company number XXXXXXXXX) incorporated in England and Wales. Registered business address: Kemp House, 160 City Road, London, EC1V 2NX.</p>
+        >Alpha Homes Ltd (company number {{$static.contentfulBasics.companyNumber }}) incorporated in England and Wales. Registered business address: {{$static.contentfulBasics.addressLine1}}, {{$static.contentfulBasics.addressLine2}}, {{$static.contentfulBasics.addressLine3}}, {{$static.contentfulBasics.postcode }}</p>
       </section>
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
