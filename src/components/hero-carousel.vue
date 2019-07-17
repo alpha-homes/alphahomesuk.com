@@ -6,7 +6,7 @@
   >
     <div class="hero-body">
       <div class="hero-body-content">
-        <div :key="index" class="content container">
+        <div class="content container">
           <h1 class="title">We are Alpha Homes</h1>
           <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']" />
           <p
