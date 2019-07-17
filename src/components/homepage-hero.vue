@@ -8,11 +8,11 @@
       <div class="hero-body-content">
         <div class="content container">
           <h1 class="title">
-            <slot name="title" />
+            <slot name="title"/>
           </h1>
-          <SubtitleCarousel :subtitles="taglines" />
+          <SubtitleCarousel :subtitles="taglines"/>
           <p class="text hero-text">
-            <slot name="text" />
+            <slot name="text"/>
           </p>
         </div>
       </div>

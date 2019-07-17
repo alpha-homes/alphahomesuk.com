@@ -1,6 +1,6 @@
 <page-query>
 query {
-    contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
+    basics: contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
   	  name
       phone
       email
@@ -14,6 +14,12 @@ query {
       companyNumber
       businessAddress
   }
+  pageContent: contentfulPage (id: "7B58Ku38VcZUaNpo6l9byT") {
+    name
+    fullTitle
+    shortSummary
+    content
+  }
 }
 </page-query>
 
@@ -23,21 +29,15 @@ query {
 
     <HomepageHero size="fullheight" :taglines="taglines">
       <template v-slot:title>We are Alpha Homes</template>
-      <template v-slot:text>Lol</template>
+      <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
     </HomepageHero>
 
     <section class="section">
       <div class="columns">
         <div class="column is-12">
           <section class="container content">
-            <h1 id="information">Welcome</h1>
-            <p>Our World-Class Capability solution offers agile workflows a suite of immersive offerings. Mobile action points are becoming senior milestone experts. So we can hit the ground running, we will be iteratively synergising every industry leader in our space. Our Company-Wide Silo solution offers core competencies a suite of best-of-breed offerings.</p>
-            <h2>Best Practices</h2>
-            <p>{{taglines}}</p>
-            <p>Is your best practice prepared for end-to-end enterprise growth? Reliably integrating globally long-term stacks is crucial to our actionable cloud.</p>
-
-            <h2>Stakeholders</h2>
-            <p>Our core asset development lifecycle enables corporate, mission critical stakeholders.</p>
+            <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
+            <p v-html="content"/>
           </section>
         </div>
       </div>
@@ -47,6 +47,7 @@ query {
 
 <script>
 import HomepageHero from "~/components/homepage-hero.vue";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
@@ -57,19 +58,15 @@ export default {
   },
   computed: {
     taglines() {
-      console.error(
-        "\n\n\n",
-        this.$page.contentfulBasics.tagline,
-        this.$page.contentfulBasics.altTaglines,
-        "\n\n\n"
-      );
       const result = [
-        this.$page.contentfulBasics.tagline,
-        ...this.$page.contentfulBasics.altTaglines
+        this.$page.basics.tagline,
+        ...this.$page.basics.altTaglines
       ];
-
-      console.log(result);
+      // console.log(result);
       return result;
+    },
+    content() {
+      return documentToHtmlString(this.$page.pageContent.content);
     }
   }
 };
