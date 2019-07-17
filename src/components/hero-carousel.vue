@@ -1,7 +1,7 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-primary has-vector-illustration"
+    class="hero is-primary is-bold has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
