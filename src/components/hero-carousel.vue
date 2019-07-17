@@ -8,7 +8,7 @@
       <div class="hero-body-content">
         <div :key="index" class="content container">
           <h1 class="title">We are Alpha Homes</h1>
-          <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']"/>
+          <SubtitleCarousel :subtitles="[hero.subtitle, 'DJ KHALEEEEEED', 'Another one']" />
           <p
             class="text hero-text"
           >We use our company-wide brands to globally manage our team player expectations. Key players will take ownership of their stand-ups by intelligently synergising knowledge transfer agile workflows.</p>
@@ -64,10 +64,10 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      const carousels = bulmaCarousel.attach(
-        this.$refs.carouselRef,
-        carouselOptions
-      );
+      // const carousels = bulmaCarousel.attach(
+      //   this.$refs.carouselRef,
+      //   carouselOptions
+      // );
     });
   }
 };
