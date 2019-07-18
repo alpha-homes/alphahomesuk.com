@@ -8,11 +8,11 @@
       <div class="hero-body-content">
         <div class="content container">
           <h1 class="title">
-            <slot name="title"/>
+            <slot name="title" />
           </h1>
-          <SubtitleCarousel :subtitles="taglines"/>
+          <SubtitleCarousel :subtitles="taglines" />
           <p class="text hero-text">
-            <slot name="text"/>
+            <slot name="text" />
           </p>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default {
     max-width: 600px;
   }
   padding-left: 2vw;
-  // text-shadow: 0 3px 4px rgba(0, 0, 0, 0.66);
+  // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .has-vector-illustration .hero-background {
@@ -72,7 +72,7 @@ export default {
   top: -52px;
   right: 0;
   bottom: 0;
-  background-size: 50% auto;
+  background-size: 58% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
