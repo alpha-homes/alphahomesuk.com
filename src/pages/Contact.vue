@@ -5,8 +5,7 @@ query {
       phone
       email
       boroughs
-      tagline
-      altTaglines
+    
       addressLine1
       addressLine2
       addressLine3
@@ -27,12 +26,17 @@ query {
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
-    <HomepageHero size="fullheight" :taglines="taglines">
-      <template v-slot:title>We are Alpha Homes</template>
-      <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
-    </HomepageHero>
+    <section class="hero is-info is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Contact Us</h1>
+          <h2 class="subtitle">Large subtitle</h2>
+          <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        </div>
+      </div>
+    </section>
 
-    <section class="section is-large">
+    <section class="section is-medium">
       <div class="columns">
         <div class="column is-12">
           <section class="container content">
@@ -51,20 +55,12 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
-    title: "Alpha Homes - London Property Specialists Since 2008"
+    title: "Contact Us"
   },
   components: {
     HomepageHero
   },
   computed: {
-    taglines() {
-      const result = [
-        this.$page.basics.tagline,
-        ...this.$page.basics.altTaglines
-      ];
-      // console.log(result);
-      return result;
-    },
     content() {
       return documentToHtmlString(this.$page.pageContent.content);
     }
