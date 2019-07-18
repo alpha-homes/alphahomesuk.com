@@ -46,12 +46,12 @@ query {
 </template>
 
 <script>
-import HomepageHero from "~/components/homepage-hero.vue";
+import HomepageHero from "~/components/home/homepage-hero.vue";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
-    title: "Alpha Homes - London Property Specialists Since 2008"
+    title: "London Property Specialists Since 2008"
   },
   components: {
     HomepageHero

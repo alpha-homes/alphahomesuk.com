@@ -49,8 +49,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./hero-carousel.scss";
-
 .has-vector-illustration .hero-body-content {
   z-index: 2;
   // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
