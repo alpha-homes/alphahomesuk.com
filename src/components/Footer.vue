@@ -17,7 +17,7 @@ query {
 </static-query>
 
 <template>
-  <footer class="footer">
+  <footer class="footer has-text-dark">
     <div class="content has-text-centered has-text-dark">
       <p id="license">
         <i class="far fa-copyright has-text-grey"></i>

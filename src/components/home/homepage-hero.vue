@@ -49,20 +49,19 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./hero-carousel.scss";
-
 .has-vector-illustration .hero-body-content {
   z-index: 2;
-  // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+
   @media screen and (min-width: 600px) {
     max-width: 600px;
   }
   padding-left: 2vw;
-  // text-shadow: 0 3px 4px rgba(0, 0, 0, 0.66);
+  // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .has-vector-illustration .hero-background {
-  background-image: url("../assets/img/home/house-illustration.svg");
+  background-image: url("../../assets/img/home/family-outside-home.svg");
   margin: 52px 0px 0px;
   padding: 0;
   width: 100%;
@@ -72,7 +71,7 @@ export default {
   top: -52px;
   right: 0;
   bottom: 0;
-  background-size: 50% auto;
+  background-size: 58% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
