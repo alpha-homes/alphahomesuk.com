@@ -25,23 +25,29 @@ query {
 
 <template>
   <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+    <div id="homepage-container">
+      <HomepageHero
+        size="fullheight"
+        :taglines="[
+          this.$page.basics.tagline,
+          ...this.$page.basics.altTaglines
+        ]"
+      >
+        <template v-slot:title>We are Alpha Homes</template>
+        <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
+      </HomepageHero>
 
-    <HomepageHero size="fullheight" :taglines="taglines">
-      <template v-slot:title>We are Alpha Homes</template>
-      <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
-    </HomepageHero>
-
-    <section class="section is-large">
-      <div class="columns">
-        <div class="column is-12">
-          <section class="container content">
-            <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-            <p v-html="content" />
-          </section>
+      <section class="section is-large">
+        <div class="columns">
+          <div class="column is-12">
+            <section class="container content">
+              <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
+              <p v-html="stringify($page.pageContent.content)"/>
+            </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </Layout>
 </template>
 
@@ -56,17 +62,9 @@ export default {
   components: {
     HomepageHero
   },
-  computed: {
-    taglines() {
-      const result = [
-        this.$page.basics.tagline,
-        ...this.$page.basics.altTaglines
-      ];
-      // console.log(result);
-      return result;
-    },
-    content() {
-      return documentToHtmlString(this.$page.pageContent.content);
+  methods: {
+    stringify(input) {
+      return documentToHtmlString(input);
     }
   }
 };
