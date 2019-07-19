@@ -26,7 +26,13 @@ query {
 <template>
   <Layout>
     <div id="homepage-container">
-      <HomepageHero size="fullheight" :taglines="taglines">
+      <HomepageHero
+        size="fullheight"
+        :taglines="[
+          this.$page.basics.tagline,
+          ...this.$page.basics.altTaglines
+        ]"
+      >
         <template v-slot:title>We are Alpha Homes</template>
         <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
       </HomepageHero>
@@ -59,16 +65,6 @@ export default {
   methods: {
     stringify(input) {
       return documentToHtmlString(input);
-    }
-  },
-  computed: {
-    taglines() {
-      const result = [
-        this.$page.basics.tagline,
-        ...this.$page.basics.altTaglines
-      ];
-      // console.log(result);
-      return result;
     }
   }
 };

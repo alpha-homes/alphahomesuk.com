@@ -40,7 +40,7 @@ module.exports = {
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
-
+    config.mode("development");
     types.forEach(type => {
       addStyleResource(config.module.rule("sass").oneOf(type));
     });

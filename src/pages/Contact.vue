@@ -49,7 +49,10 @@ query {
                 <p>Need to send us something the old fashioned way?</p>
 
                 <ul class="contact-postal-address is-size-5 is-family-sans-serif has-text-grey">
-                  <li v-for="(line, index) in address" :key="line">{{line}}</li>
+                  <li
+                    v-for="line in [$page.basics.name,$page.basics.addressLine1,$page.basics.addressLine2,$page.basics.addressLine3,$page.basics.postcode]"
+                    :key="line"
+                  >{{line}}</li>
                 </ul>
               </div>
             </div>
@@ -74,17 +77,6 @@ export default {
   methods: {
     stringify(input) {
       return documentToHtmlString(input);
-    }
-  },
-  computed: {
-    address() {
-      return [
-        this.$page.basics.name,
-        this.$page.basics.addressLine1,
-        this.$page.basics.addressLine2,
-        this.$page.basics.addressLine3,
-        this.$page.basics.postcode
-      ];
     }
   }
 };
