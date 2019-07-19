@@ -44,11 +44,11 @@ query {
             </div>
             <div class="column is-4">
               <div class="other-ways content">
-                <div v-html="stringify(content)"/>
+                <div v-html="stringify($page.pageContent.content)"/>
                 <h2>by Post</h2>
                 <p>Need to send us something the old fashioned way?</p>
 
-                <ul class="contact-postal-address is-size-5 is-family-sans-serif has-text-grey">
+                <ul class="contact-postal-address is-size-6 is-family-sans-serif has-text-grey">
                   <li
                     v-for="line in [$page.basics.name,$page.basics.addressLine1,$page.basics.addressLine2,$page.basics.addressLine3,$page.basics.postcode]"
                     :key="line"
