@@ -44,7 +44,7 @@ query {
             </div>
             <div class="column is-4">
               <div class="other-ways content">
-                <div v-html="content"/>
+                <div v-html="stringify(content)"/>
                 <h2>by Post</h2>
                 <p>Need to send us something the old fashioned way?</p>
 
@@ -71,10 +71,12 @@ export default {
   components: {
     ContactForm
   },
+  methods: {
+    stringify(input) {
+      return documentToHtmlString(input);
+    }
+  },
   computed: {
-    content() {
-      return documentToHtmlString(this.$page.pageContent.content);
-    },
     address() {
       return [
         this.$page.basics.name,

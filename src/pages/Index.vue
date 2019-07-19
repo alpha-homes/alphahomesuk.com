@@ -36,7 +36,7 @@ query {
           <div class="column is-12">
             <section class="container content">
               <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-              <p v-html="content"/>
+              <p v-html="stringify($page.pageContent.content)"/>
             </section>
           </div>
         </div>
@@ -56,6 +56,11 @@ export default {
   components: {
     HomepageHero
   },
+  methods: {
+    stringify(input) {
+      return documentToHtmlString(input);
+    }
+  },
   computed: {
     taglines() {
       const result = [
@@ -64,9 +69,6 @@ export default {
       ];
       // console.log(result);
       return result;
-    },
-    content() {
-      return documentToHtmlString(this.$page.pageContent.content);
     }
   }
 };
