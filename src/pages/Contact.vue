@@ -23,55 +23,40 @@ query {
 </page-query>
 
 <template>
-  <Layout id="contact-page" class="has-text-light has-background-info">
+  <Layout class="contact-page">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <section class="hero is-info has-text-light">
-      <div class="hero-body">
-        <div class="content container">
-          <h1 class="title has-text-light">Contact Us</h1>
-          <h2 class="subtitle">How can we help?</h2>
-          <p>{{$page.pageContent.shortSummary}}</p>
+    <div id="contact-page-container">
+      <section class="hero is-medium is-primary-dark">
+        <div class="hero-body">
+          <div class="content container">
+            <h1 class="title">Contact Us</h1>
+            <h2 class="subtitle">How can we help?</h2>
+            <p>{{$page.pageContent.shortSummary}}</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="is-info section">
-      <div class="columns">
-        <div class="column is-12">
-          <section class="container has-text-light">
-            <div class="columns">
-              <div class="column is-family-sans-serif has-text-light">
-                <h1
-                  class="title has-text-light is-size-4"
-                  id="information"
-                >{{$page.pageContent.fullTitle}}</h1>
-                <b-field label="Name">
-                  <b-input v-model="name"></b-input>
-                </b-field>
-
-                <!-- <b-field label="Email" type="is-danger" message="This email is invalid"> -->
-                <b-field label="Email">
-                  <b-input type="email" value="john@" maxlength="30"></b-input>
-                </b-field>
-
-                <b-field label="Message">
-                  <b-input maxlength="200" type="textarea"></b-input>
-                </b-field>
-              </div>
-              <div class="column container content">
-                <div v-html="content" />
-                <h3>by Post</h3>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-3">
+            <div class="column is-8 is-family-sans-serif">
+              <h1 class="title is-size-4" id="information">{{$page.pageContent.fullTitle}}</h1>
+              <ContactForm/>
+            </div>
+            <div class="column is-4">
+              <div class="content">
+                <div v-html="content"/>
+                <h2>by Post</h2>
                 <p>Need to send us something the old fashioned way?</p>
 
-                <p>Our address is:</p>
-                <ul class="contact-postal-address is-italic">
+                <ul class="contact-postal-address is-size-5 is-family-sans-serif has-text-grey">
                   <li v-for="(line, index) in address" :key="line">{{line}}</li>
                 </ul>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </Layout>
 </template>
 
@@ -107,26 +92,15 @@ export default {
 input {
   font-family: $ah-header;
 }
-ul.contact-postal-address {
-  list-style: none;
-  margin-left: 12pt;
-  li {
-    display: block;
-    margin: 0;
-  }
-}
 
-#contact-page {
-  .content {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul {
-      color: #ffffff;
+#contact-page-container {
+  ul.contact-postal-address {
+    font-weight: 400;
+    list-style: none;
+    margin-left: 12pt;
+    li {
+      display: block;
+      margin: 0;
     }
   }
 }

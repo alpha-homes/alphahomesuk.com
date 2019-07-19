@@ -1,12 +1,12 @@
 <template>
   <nav
-    class="navbar ah-navbar is-primary-dark is-fixed-top"
+    class="navbar ah-navbar is-bold is-primary-dark is-fixed-top"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
       <g-link class="navbar-item navbar-logo-item" to="/">
-        <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo" />
+        <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo"/>
       </g-link>
 
       <a
