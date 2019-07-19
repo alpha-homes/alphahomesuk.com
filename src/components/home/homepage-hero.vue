@@ -60,7 +60,7 @@ export default {
 }
 
 .has-vector-illustration .hero-background {
-  background-image: url("../assets/img/home/house-illustration.svg");
+  background-image: url("../../assets/img/home/house-illustration.svg");
   margin: 52px 0px 0px;
   padding: 0;
   width: 100%;
