@@ -32,12 +32,12 @@ query {
       <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
     </HomepageHero>
 
-    <section class="section">
+    <section class="section is-large">
       <div class="columns">
         <div class="column is-12">
           <section class="container content">
             <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-            <p v-html="content"/>
+            <p v-html="content" />
           </section>
         </div>
       </div>
@@ -46,12 +46,12 @@ query {
 </template>
 
 <script>
-import HomepageHero from "~/components/homepage-hero.vue";
+import HomepageHero from "~/components/home/homepage-hero.vue";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
-    title: "Alpha Homes - London Property Specialists Since 2008"
+    title: "London Property Specialists Since 2008"
   },
   components: {
     HomepageHero
