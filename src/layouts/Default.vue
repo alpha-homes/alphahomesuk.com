@@ -1,9 +1,12 @@
 <template>
   <div>
-    <Navbar />
-    <slot />
-
-    <Footer />
+    <Navbar/>
+    <transition name="quickfade" appear>
+      <main>
+        <slot/>
+      </main>
+    </transition>
+    <Footer/>
   </div>
 </template>
 
@@ -29,4 +32,11 @@ export default {
 
 <style lang="scss">
 @import "~/assets/sass/style.scss";
+.quickfade-enter-active {
+  transition: opacity 0.33s ease-in-out;
+}
+
+.quickfade-enter {
+  opacity: 0;
+}
 </style>

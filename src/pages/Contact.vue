@@ -43,7 +43,7 @@ query {
               <ContactForm/>
             </div>
             <div class="column is-4">
-              <div class="content">
+              <div class="other-ways content">
                 <div v-html="content"/>
                 <h2>by Post</h2>
                 <p>Need to send us something the old fashioned way?</p>
@@ -103,6 +103,9 @@ input {
       display: block;
       margin: 0;
     }
+  }
+  .other-ways {
+    padding-right: 10pt;
   }
 }
 </style>
