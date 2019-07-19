@@ -44,13 +44,13 @@
         <g-link to="/agents" class="navbar-item">Agents</g-link>
         <div class="navbar-item">
           <div class="buttons">
-            <g-link to="/landlord-login" class="button is-twitter">
+            <g-link to="/landlord-login" class="button is-outlined">
               <span class="icon">
                 <i class="fas fa-key"></i>
               </span>
               <span>Landlord Login</span>
             </g-link>
-            <g-link to="/contact" class="button is-success">
+            <g-link to="/contact" class="button is-success is-rounded">
               <span class="icon">
                 <i class="fas fa-comments"></i>
               </span>

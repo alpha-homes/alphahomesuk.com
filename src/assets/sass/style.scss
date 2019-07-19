@@ -44,3 +44,9 @@ h1.title,
 .content h3 {
   font-size: 1em;
 }
+
+button.button {
+  font-family: $ah-header;
+  font-weight: 300;
+  letter-spacing: 1pt;
+}

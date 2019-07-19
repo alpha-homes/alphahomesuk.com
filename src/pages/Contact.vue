@@ -37,7 +37,7 @@ query {
       </section>
       <section class="section">
         <div class="container">
-          <div class="columns is-3">
+          <div class="columns is-4">
             <div class="column is-8 is-family-sans-serif">
               <h1 class="title is-size-4" id="information">{{$page.pageContent.fullTitle}}</h1>
               <ContactForm/>
@@ -94,6 +94,7 @@ input {
 }
 
 #contact-page-container {
+  padding-bottom: 50pt;
   ul.contact-postal-address {
     font-weight: 400;
     list-style: none;

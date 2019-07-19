@@ -8,11 +8,11 @@
       <div class="hero-body-content">
         <div class="content container">
           <h1 class="title">
-            <slot name="title" />
+            <slot name="title"/>
           </h1>
-          <SubtitleCarousel :subtitles="taglines" />
+          <SubtitleCarousel :subtitles="taglines"/>
           <p class="text hero-text">
-            <slot name="text" />
+            <slot name="text"/>
           </p>
         </div>
       </div>
@@ -51,7 +51,8 @@ export default {
 <style lang="scss">
 .has-vector-illustration .hero-body-content {
   z-index: 2;
-  // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+
   @media screen and (min-width: 600px) {
     max-width: 600px;
   }
@@ -60,7 +61,7 @@ export default {
 }
 
 .has-vector-illustration .hero-background {
-  background-image: url("../../assets/img/home/house-illustration.svg");
+  background-image: url("../../assets/img/home/family-outside-home.svg");
   margin: 52px 0px 0px;
   padding: 0;
   width: 100%;
