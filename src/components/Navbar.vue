@@ -32,7 +32,7 @@
 
         <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="/services" class="navbar-link" exact>Services</a>
+          <a href="/services" class="navbar-link">Services</a>
 
           <div class="navbar-dropdown">
             <a href="/services/property-management" class="navbar-item">Property Management</a>
