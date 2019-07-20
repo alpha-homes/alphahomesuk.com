@@ -49,7 +49,7 @@ query {
       </section>
       <section class="section">
         <section class="container has-text-grey">
-          <p class="is-size-6">
+          <p class="is-size-6 has-text-centered">
             <a href="/services">Click here</a> to learn more about the services we can provide for you, or
             <a
               href="/contact"

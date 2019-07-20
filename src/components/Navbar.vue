@@ -28,8 +28,6 @@
       <div class="navbar-start"></div>
 
       <div class="navbar-end">
-        <g-link to="/" class="navbar-item is-hidden-desktop" exact>Home</g-link>
-
         <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
           <a href="/services" class="navbar-link">Services</a>
