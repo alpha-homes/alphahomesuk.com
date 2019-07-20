@@ -5,9 +5,9 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <g-link class="navbar-item navbar-logo-item" to="/" exact>
+      <a class="navbar-item navbar-logo-item" href="/" exact>
         <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo"/>
-      </g-link>
+      </a>
 
       <a
         role="button"
@@ -28,9 +28,9 @@
       <div class="navbar-start"></div>
 
       <div class="navbar-end">
-        <g-link to="/" class="navbar-item is-hidden-desktop" exact>Home</g-link>
+        <a href="/" class="navbar-item is-hidden-desktop" exact>Home</a>
 
-        <g-link to="/about" class="navbar-item">About</g-link>
+        <a href="/about" class="navbar-item">About</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a href="/services" class="navbar-link">Services</a>
 
@@ -50,14 +50,14 @@
               </span>
               <span>Landlord Login</span>
             </a>
-            <g-link to="/contact" class="button is-success is-rounded">
+            <a href="/contact" class="button is-success is-rounded">
               <span class="icon">
                 <i class="fas fa-comments"></i>
               </span>
               <span>
                 <strong>Contact Us</strong>
               </span>
-            </g-link>
+            </a>
           </div>
         </div>
       </div>
