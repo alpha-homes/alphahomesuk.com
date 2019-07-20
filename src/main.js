@@ -32,4 +32,10 @@ export default function(Vue, { router, head, isClient }) {
   });
 
   Vue.use(VueRx);
+
+  // recaptcha
+  head.script.push({
+    src:
+      "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"
+  });
 }
