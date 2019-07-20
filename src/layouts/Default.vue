@@ -1,7 +1,11 @@
 <template>
   <div id="main-wrapper">
     <Navbar/>
-    <slot/>
+    <transition name="quickfade" appear>
+      <main>
+        <slot/>
+      </main>
+    </transition>
     <Footer/>
   </div>
 </template>

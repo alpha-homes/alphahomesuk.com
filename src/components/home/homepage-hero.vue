@@ -74,7 +74,7 @@ export default {
   }
   right: 0;
   bottom: 0;
-  background-size: 58% auto;
+  background-size: 65% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
