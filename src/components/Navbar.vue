@@ -5,7 +5,7 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <g-link class="navbar-item navbar-logo-item" to="/">
+      <g-link class="navbar-item navbar-logo-item" to="/" exact>
         <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo"/>
       </g-link>
 
@@ -28,11 +28,11 @@
       <div class="navbar-start"></div>
 
       <div class="navbar-end">
-        <g-link to="/" class="navbar-item is-hidden-desktop">Home</g-link>
+        <g-link to="/" class="navbar-item is-hidden-desktop" exact>Home</g-link>
 
         <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="/services" class="navbar-link">Services</a>
+          <a href="/services" class="navbar-link" exact>Services</a>
 
           <div class="navbar-dropdown">
             <a href="/services/property-management" class="navbar-item">Property Management</a>
