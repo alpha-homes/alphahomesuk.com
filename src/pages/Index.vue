@@ -47,6 +47,16 @@ query {
           </div>
         </div>
       </section>
+      <section class="section">
+        <section class="container has-text-grey">
+          <p class="is-size-6">
+            <a href="/services">Click here</a> to learn more about the services we can provide for you, or
+            <a
+              href="/contact"
+            >click here to get in contact with us.</a>
+          </p>
+        </section>
+      </section>
     </div>
   </Layout>
 </template>
