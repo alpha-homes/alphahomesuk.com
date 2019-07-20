@@ -37,7 +37,7 @@ query {
         <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
       </HomepageHero>
 
-      <section class="section is-large">
+      <section class="section is-medium">
         <div class="columns">
           <div class="column is-12">
             <section class="container content">
@@ -47,7 +47,7 @@ query {
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section is-medium">
         <section class="container has-text-grey">
           <p class="is-size-6 has-text-centered">
             <a href="/services">Click here</a> to learn more about the services we can provide for you, or

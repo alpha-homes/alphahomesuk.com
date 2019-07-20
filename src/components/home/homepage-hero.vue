@@ -1,7 +1,7 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-primary is-bold has-vector-illustration"
+    class="hero is-twitter has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
@@ -51,7 +51,7 @@ export default {
 <style lang="scss">
 .has-vector-illustration .hero-body-content {
   z-index: 2;
-  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 
   @media screen and (min-width: 600px) {
     max-width: 600px;
@@ -68,7 +68,10 @@ export default {
   height: 100%;
   position: absolute;
   left: 0;
-  top: -52px;
+  top: -20px;
+  @include mobile {
+    top: -40px;
+  }
   right: 0;
   bottom: 0;
   background-size: 58% auto;
