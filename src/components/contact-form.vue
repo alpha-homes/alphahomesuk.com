@@ -2,16 +2,20 @@
   <div class="contact-form">
     <form @submit.prevent="onSubmit">
     <b-field label="Full Name">
-      <b-input v-model="name" :disabled="successful"></b-input>
+      <b-input v-model="name" required :disabled="successful"></b-input>
     </b-field>
 
     <!-- <b-field label="Email" type="is-danger" message="This email is invalid"> -->
     <b-field label="Email">
-      <b-input type="email" value="" maxlength="30" v-model="email" :disabled="successful"></b-input>
+      <b-input type="email" required value="" maxlength="30" v-model="email" :disabled="successful"></b-input>
+    </b-field>
+
+    <b-field label="Phone Number">
+      <b-input type="phone" value="" maxlength="14" v-model="phone" :disabled="successful"></b-input>
     </b-field>
 
     <b-field label="Message">
-      <b-input maxlength="1000" type="textarea" v-model="message" :disabled="successful"></b-input>
+      <b-input maxlength="1000" required type="textarea" v-model="message" :disabled="successful" class="is-family-sans-serif"></b-input>
     </b-field>
     <vue-recaptcha ref="recaptcha" @verify="onVerify"
           @expired="onExpired" sitekey="6Lfeoq4UAAAAAALFPgd99va6gf74tDu7Q3jTsTtd">
@@ -32,8 +36,12 @@
 </template>
 
 <script>
+
   import VueRecaptcha from 'vue-recaptcha';
 import { timingSafeEqual } from 'crypto';
+import * as emailjs from "emailjs-com";
+emailjs.init("user_TyJnrsmJXdUAwTfJKLobO")
+
 
 export default {
   name: 'ContactForm',
@@ -42,24 +50,42 @@ export default {
   },
   methods: {
     onSubmit: function () {
+      if(!this.submitting){
+        // activate spinner
       this.submitting = true;
-      if(this.human){
+      if(this.human && this.name && this.email && this.message){
+        this.valid = true;
         console.debug("human detected")
-        // TODO: activate spinner
-        // TODO: send form
-        // display confirmation
-        setTimeout(()=>{
+        // send form
+        const emailData = {
+          name: this.name,
+          email: this.email,
+          phone: this.phone || 'Not Provided',
+          text: this.message
+        } 
+
+        emailjs.send("default_service", "contact_page", emailData).then(()=>{
           this.submitting = false;
           this.successful = true;
-        }, 1000)
           setTimeout(()=>{
           this.isModalActive = true;
-        }, 2000)
+          }, 1000)
+        },(error)=>{
+          this.submitting = false;
+          this.successful = false;
+          console.error("email send fail due to error:", error)
+        }
+        )
+
+          
       } else {
         console.debug("THIS IS BOT. DENYING")
         this.valid = false
         this.submitting = false
       }
+      
+      }
+      
     },
     onVerify: function (response) {
       console.debug('recaptcha verified, setting human to true')
@@ -78,6 +104,7 @@ export default {
       name: '',
       email: '',
       message: '',
+      phone: '',
       human: false,
       valid: false,
       submitting: false,
