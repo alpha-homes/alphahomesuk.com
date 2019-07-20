@@ -83,7 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-input {
+input,
+textarea {
   font-family: $ah-header;
 }
 
