@@ -42,7 +42,7 @@ query {
           <div class="column is-12">
             <section class="container content">
               <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-              <p v-html="stringify($page.pageContent.content)"/>
+              <div v-html="stringify($page.pageContent.content)"/>
             </section>
           </div>
         </div>
