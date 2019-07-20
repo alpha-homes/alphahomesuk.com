@@ -52,7 +52,7 @@
               </span>
               <span>Landlord Login</span>
             </a>
-            <g-link to="/contact" class="button is-success is-rounded">
+            <g-link to="/contact" class="button is-green is-rounded">
               <span class="icon">
                 <i class="fas fa-comments"></i>
               </span>
