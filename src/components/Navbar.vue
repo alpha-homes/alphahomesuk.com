@@ -42,9 +42,9 @@
         <a href="/agents" class="navbar-item">Agents</a>
         <div class="navbar-item">
           <div class="buttons">
-            <a href="/landlord-login" class="button is-outlined">
+            <a href="/landlord-login" class="button is-dark is-inverted is-rounded">
               <span class="icon">
-                <i class="fas fa-key"></i>
+                <i class="fas fa-key has-text-brown"></i>
               </span>
               <span>Landlord Login</span>
             </a>

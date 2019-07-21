@@ -3,7 +3,7 @@
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 
-$ah-blue: hsla(210, 51%, 18%, 1.00);
+$ah-blue: hsla(210, 51%, 18%, 1);
 $ah-blue-invert: findColorInvert($ah-blue);
 $ah-turquoise: #2fa292;
 $ah-green: rgb(3, 168, 78);
@@ -13,6 +13,7 @@ $ah-red: hsla(12, 79%, 57%, 1);
 $ah-cyan: hsla(209, 100%, 61%, 1);
 $ah-cyan-light: hsla(209, 100%, 80%, 1);
 $ah-pink: hsla(356, 95%, 64%, 1);
+$ah-brown: hsla(24, 48%, 46%, 1);
 $ah-black: hsla(116, 0%, 10%, 1);
 
 $black: hsl(0, 0%, 4%) !default;
@@ -99,6 +100,10 @@ $colors: (
   ),
   "primary-dark": (
     $ah-black,
+    $white
+  ),
+  "brown": (
+    $ah-brown,
     $white
   )
 );
