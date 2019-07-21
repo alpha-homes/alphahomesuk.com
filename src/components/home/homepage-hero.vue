@@ -10,7 +10,7 @@
           <h1 class="title homepage-hero-title">
             We are
             <span class="hero-logo">
-              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.png">Alpha Homes
+              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.svg">Alpha Homes
             </span>
           </h1>
 
