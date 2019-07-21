@@ -25,7 +25,7 @@ query {
 <template>
   <Layout>
     <div id="generic-container">
-      <section class="hero is-medium is-brown">
+      <section class="hero is-medium is-danger">
         <div class="hero-body">
           <div class="container content">
             <h1>{{$page.pageContent.name}}</h1>
