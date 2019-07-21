@@ -7,15 +7,23 @@
     <div class="hero-body">
       <div class="hero-body-content">
         <div class="content container">
-          <h1 class="title">
+          <h1 class="title homepage-hero-title">
             We are
             <span class="hero-logo">
               <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.svg">Alpha Homes
             </span>
           </h1>
+
           <SubtitleCarousel :subtitles="taglines"/>
           <p class="text hero-text">
             <slot name="text"/>
+          </p>
+          <p id="learn-more" class="has-text-right">
+            <a
+              href="#information"
+              id="call-to-action"
+              class="button is-dark is-inverted is-outlined"
+            >Learn More</a>
           </p>
         </div>
       </div>
@@ -52,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
-.hero.is-bold.has-vector-illustration {
+#homepage-hero {
   background: linear-gradient(141deg, #162d45 0%, #3287f5 71%, #3287f5 100%);
 }
 
@@ -77,11 +85,11 @@ export default {
   left: 0;
   top: -3vh;
   @include mobile {
-    top: -3vh;
+    top: -50px;
   }
   right: 0;
   bottom: 0;
-  background-size: 65% auto;
+  background-size: 70% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -89,9 +97,6 @@ export default {
 }
 
 #homepage-hero .hero-text {
-  position: relative;
-  top: 100px;
-
   @media screen and (max-width: 320px) {
     font-size: 0.8em;
   }
@@ -108,12 +113,35 @@ export default {
   .hero-body {
     // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    margin-top: -80px;
+    // margin-top: -52px;
+    @include mobile {
+      // margin-top: -100px;
+    }
   }
   .hero-logo {
+    margin-right: 0;
     font-weight: 700;
     font-size: 1.25em;
     letter-spacing: -2px;
+    @include mobile {
+      position: relative;
+      top: -5px;
+      display: block;
+      letter-spacing: -1px;
+    }
+  }
+
+  .title.homepage-hero-title {
+    overflow: visible;
+    margin-right: 0;
+    @include mobile {
+      // font-size: 1.25em;
+      letter-spacing: 0;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 1.8em;
+    }
+    margin-bottom: 10px;
   }
 
   .hero-logo-image {
@@ -122,6 +150,10 @@ export default {
     position: relative;
     top: 12px;
     margin-right: 5px;
+    @include mobile {
+      height: 42px;
+      top: 8px;
+    }
   }
 }
 </style>

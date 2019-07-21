@@ -1,14 +1,20 @@
 <template>
-  <h2 class="subtitle subtitle-carousel">
-    <transition-group name="bounce" enter-active-class="bounceInLeft" leave-active-class="fadeOut">
-      <span
-        v-for="(txt, i) in subtitles"
-        :key="txt"
-        v-show="index === i"
-        class="carousel-item"
-      >{{txt}}</span>
-    </transition-group>
-  </h2>
+  <div class="subtitle-carousel-container">
+    <h2 class="subtitle subtitle-carousel">
+      <transition-group
+        name="bounce"
+        enter-active-class="bounceInLeft"
+        leave-active-class="bounceOutRight"
+      >
+        <span
+          v-for="(txt, i) in subtitles"
+          :key="txt"
+          v-show="index === i"
+          class="carousel-item"
+        >{{txt}}</span>
+      </transition-group>
+    </h2>
+  </div>
 </template>
 
 <script>
@@ -39,14 +45,22 @@ export default {
 </script>
 
 <style lang="scss">
+.subtitle-carousel-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  // background: tomato;
+}
 .subtitle-carousel {
   .carousel-item {
     display: inline;
     position: absolute;
     left: 0;
-    top: 64px;
-    @media screen and (max-width: 320px) {
-      top: 90px;
+    top: 0px;
+    @include mobile {
       font-size: 0.8em;
     }
   }

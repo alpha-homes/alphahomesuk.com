@@ -41,8 +41,10 @@ query {
         <div class="columns">
           <div class="column is-12">
             <section class="container content">
-              <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-              <div v-html="stringify($page.pageContent.content)"/>
+              <div id="information">
+                <h1 class="has-text-centered" id="welcome">{{$page.pageContent.fullTitle}}</h1>
+                <div id="homepage-content" v-html="stringify($page.pageContent.content)"/>
+              </div>
             </section>
           </div>
         </div>
@@ -80,5 +82,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+#homepage-container {
+  h1#welcome {
+    margin-top: 4em;
+    margin-bottom: 1em;
+  }
+
+  #homepage-content {
+    p:first-child {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
+}
 </style>

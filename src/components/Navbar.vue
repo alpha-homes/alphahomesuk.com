@@ -1,5 +1,6 @@
 <template>
   <nav
+    id="ah-navbar"
     class="navbar ah-navbar is-primary is-fixed-top has-navbar-shadow"
     role="navigation"
     aria-label="main navigation"
@@ -100,6 +101,13 @@ img.navbar-logo {
 }
 .navbar.has-navbar-shadow {
   box-shadow: 0 2px 2px 2px #162d45;
+}
+
+nav#ah-navbar {
+  a {
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
 }
 </style>
 

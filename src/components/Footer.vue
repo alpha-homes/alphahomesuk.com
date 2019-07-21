@@ -105,7 +105,9 @@ export default {
 
 .footer #credits {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   cursor: pointer;
+  filter: opacity(0.75);
 }
 
 .inline-image {
@@ -119,7 +121,12 @@ export default {
 }
 
 .inline-image#alphahomes-footer-logo {
-  top: 9px;
+  top: 16px;
   margin: 0 5px;
+  filter: opacity(0.66);
+}
+
+.footer #legal {
+  margin-top: 20pt;
 }
 </style>
