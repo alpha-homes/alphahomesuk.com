@@ -35,6 +35,12 @@ module.exports = {
         environment: "master",
         typeName: "Contentful"
       }
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-144198537-1"
+      }
     }
   ],
   chainWebpack(config) {
