@@ -33,7 +33,15 @@ query {
       <section id="legal" class="has-text-grey is-size-7">
         <p
           id="company-info"
-        >ALPHA HOMES LIMITED (company number {{$static.basics.companyNumber }}) incorporated in England and Wales. Registered business address: {{$static.basics.businessAddress}}.</p>
+        >ALPHA HOMES LIMITED is a limited liability company incorporated in England and Wales.</p>
+        <p id="company-number">
+          Company Number:
+          <span class="is-bold">{{$static.basics.companyNumber }}</span>
+        </p>
+        <p id="registered-business-address">
+          Registered business address:
+          <span class="is-italic">{{$static.basics.businessAddress}}.</span>
+        </p>
       </section>
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
@@ -108,6 +116,10 @@ export default {
   margin-bottom: 2rem;
   cursor: pointer;
   filter: opacity(0.75);
+  a {
+    font-weight: 300;
+    font-style: oblique;
+  }
 }
 
 .inline-image {
@@ -128,5 +140,11 @@ export default {
 
 .footer #legal {
   margin-top: 20pt;
+}
+
+#company-info,
+#registered-business-address,
+#company-number {
+  margin: 0;
 }
 </style>

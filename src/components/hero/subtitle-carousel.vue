@@ -4,7 +4,7 @@
       <transition-group
         name="bounce"
         enter-active-class="bounceInLeft"
-        leave-active-class="bounceOutRight"
+        leave-active-class="fadeOutRight"
       >
         <span
           v-for="(txt, i) in subtitles"

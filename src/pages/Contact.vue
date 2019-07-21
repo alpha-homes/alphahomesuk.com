@@ -26,7 +26,7 @@ query {
   <Layout class="contact-page">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <div id="contact-page-container">
-      <section class="hero is-medium is-primary-dark">
+      <section class="hero is-medium is-bold is-green">
         <div class="hero-body">
           <div class="content container">
             <h1 class="title">Contact Us</h1>
@@ -39,7 +39,10 @@ query {
         <div class="container">
           <div class="columns is-4">
             <div class="column is-8 is-family-sans-serif">
-              <h1 class="title is-size-4" id="information">{{$page.pageContent.fullTitle}}</h1>
+              <h1
+                class="title is-size-4 homepage-hero-title"
+                id="information"
+              >{{$page.pageContent.fullTitle}}</h1>
               <ContactForm/>
             </div>
             <div class="column is-4">

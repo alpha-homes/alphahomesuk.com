@@ -31,19 +31,20 @@
       <div class="navbar-end">
         <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="/services" class="navbar-link">Services</a>
+          <g-link to="/services" class="navbar-link" exact>Services</g-link>
 
           <div class="navbar-dropdown">
-            <a href="/services/property-management" class="navbar-item">Property Management</a>
-            <a href="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</a>
+            <g-link to="/services/property-management" class="navbar-item">Property Management</g-link>
+            <g-link to="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</g-link>
           </div>
         </div>
-        <a href="/landlords" class="navbar-item">Landlords</a>
-        <a href="/tenants" class="navbar-item">Tenants</a>
-        <a href="/agents" class="navbar-item">Agents</a>
+        <g-link to="/landlords" class="navbar-item">Landlords</g-link>
+        <g-link to="/tenants" class="navbar-item">Tenants</g-link>
+        <g-link to="/agents" class="navbar-item">Agents</g-link>
         <div class="navbar-item">
           <div class="buttons">
-            <a href="/landlord-login" class="button is-dark is-inverted is-rounded">
+            <a href="/landlord-login" target="_blank" class="button is-dark is-inverted is-rounded">
+              <!-- TODO: change landlord login link -->
               <span class="icon">
                 <i class="fas fa-key has-text-brown"></i>
               </span>

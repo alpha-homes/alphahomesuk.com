@@ -85,7 +85,6 @@ export default {
 <style lang="scss">
 #homepage-container {
   h1#welcome {
-    margin-top: 4em;
     margin-bottom: 1em;
   }
 

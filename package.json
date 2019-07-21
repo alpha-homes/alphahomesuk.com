@@ -25,6 +25,7 @@
     "vue-cookie-accept-decline": "^5.2.3",
     "vue-recaptcha": "^1.2.0",
     "vue-rx": "^6.2.0",
+    "vue-scrollto": "^2.15.0",
     "vue2-animate": "^2.1.0"
   },
   "devDependencies": {

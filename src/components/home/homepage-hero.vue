@@ -10,7 +10,11 @@
           <h1 class="title homepage-hero-title">
             We are
             <span class="hero-logo">
-              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.svg">Alpha Homes
+              <g-image
+                class="hero-logo-image"
+                width="53"
+                src="../../assets/img/logo/v2/emblem-light.png"
+              />Alpha Homes
             </span>
           </h1>
 
@@ -20,7 +24,7 @@
           </p>
           <p id="learn-more" class="has-text-right">
             <a
-              href="#information"
+              v-scroll-to="{el: '#welcome', offset: -170}"
               id="call-to-action"
               class="button is-dark is-inverted is-outlined"
             >Learn More</a>
@@ -122,7 +126,7 @@ export default {
     margin-right: 0;
     font-weight: 700;
     font-size: 1.25em;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
     @include mobile {
       position: relative;
       top: -5px;
