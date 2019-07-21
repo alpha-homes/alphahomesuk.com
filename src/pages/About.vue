@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <div id="about-container">
-      <section class="hero is-large">
+    <div id="generic-container">
+      <section class="hero is-primary is-medium">
         <div class="hero-body">
           <div class="container content">
-            <h1>About us</h1>
+            <h1 class="has-text-light">About us</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
           </div>
         </div>

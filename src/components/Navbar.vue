@@ -1,16 +1,13 @@
 <template>
   <nav
-    class="navbar ah-navbar is-bold is-primary-dark is-fixed-top"
+    id="ah-navbar"
+    class="navbar ah-navbar is-primary is-fixed-top has-navbar-shadow"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
       <g-link class="navbar-item navbar-logo-item" to="/" exact>
-        <img
-          alt="Alpha Homes"
-          src="../assets/img/logo/logo-full-transparent.svg"
-          class="navbar-logo"
-        >
+        <img alt="Alpha Homes" src="../assets/img/logo/v2/logo-full.svg" class="navbar-logo">
       </g-link>
 
       <a
@@ -34,21 +31,22 @@
       <div class="navbar-end">
         <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="/services" class="navbar-link">Services</a>
+          <g-link to="/services" class="navbar-link" exact>Services</g-link>
 
           <div class="navbar-dropdown">
-            <a href="/services/property-management" class="navbar-item">Property Management</a>
-            <a href="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</a>
+            <g-link to="/services/property-management" class="navbar-item">Property Management</g-link>
+            <g-link to="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</g-link>
           </div>
         </div>
-        <a href="/landlords" class="navbar-item">Landlords</a>
-        <a href="/tenants" class="navbar-item">Tenants</a>
-        <a href="/agents" class="navbar-item">Agents</a>
+        <g-link to="/landlords" class="navbar-item">Landlords</g-link>
+        <g-link to="/tenants" class="navbar-item">Tenants</g-link>
+        <g-link to="/agents" class="navbar-item">Agents</g-link>
         <div class="navbar-item">
           <div class="buttons">
-            <a href="/landlord-login" class="button is-outlined">
+            <a href="/landlord-login" target="_blank" class="button is-dark is-inverted is-rounded">
+              <!-- TODO: change landlord login link -->
               <span class="icon">
-                <i class="fas fa-key"></i>
+                <i class="fas fa-key has-text-brown"></i>
               </span>
               <span>Landlord Login</span>
             </a>
@@ -94,13 +92,23 @@ export default {
 .navbar-item.navbar-logo-item {
   // padding: 0;
 }
-.navbar-logo {
+img.navbar-logo {
   width: auto;
-  height: 36px;
+  height: 40px;
 }
 .ah-navbar {
   font-family: $ah-header;
   font-size: 0.9em;
+}
+.navbar.has-navbar-shadow {
+  box-shadow: 0 2px 2px 2px #162d45;
+}
+
+nav#ah-navbar {
+  a {
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
 }
 </style>
 

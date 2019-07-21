@@ -4,6 +4,8 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import Buefy from "buefy";
 import VueRx from "vue-rx";
+import * as VueScrollTo from "vue-scrollto";
+
 import "vue2-animate/dist/vue2-animate.min.css";
 
 export default function(Vue, { router, head, isClient }) {
@@ -38,4 +40,6 @@ export default function(Vue, { router, head, isClient }) {
     src:
       "https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"
   });
+
+  Vue.use(VueScrollTo);
 }

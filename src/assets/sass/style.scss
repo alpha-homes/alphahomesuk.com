@@ -12,6 +12,8 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+$footer-background-color: rgba(255, 255, 255, 1);
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "./lux-custom/_variables.scss";
@@ -45,8 +47,14 @@ h1.title,
   font-size: 1em;
 }
 
-button.button {
+button.button,
+a.button {
   font-family: $ah-header;
   font-weight: 300;
-  letter-spacing: 1pt;
+  letter-spacing: 0pt;
+}
+
+a {
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }

@@ -1,20 +1,42 @@
+<page-query>
+query {
+    basics: contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
+  	  name
+      phone
+      email
+      boroughs
+      addressLine1
+      addressLine2
+      addressLine3
+      postcode
+      companyNumber
+      businessAddress
+  }
+  pageContent: contentfulPage (id: "5B51nja1HuSFDfb0jGuu9n") {
+    name
+    fullTitle
+    shortSummary
+    content
+  }
+}
+</page-query>
+
+
 <template>
   <Layout>
-    <div id="about-container">
-      <section class="hero is-large">
+    <div id="generic-container">
+      <section class="hero is-bold is-medium is-warning">
         <div class="hero-body">
           <div class="container content">
-            <h1>Agents</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+            <h1 class="has-text-dark">{{$page.pageContent.name}}</h1>
+            <p>{{$page.pageContent.shortSummary}}</p>
           </div>
         </div>
       </section>
       <section class="section is-medium">
         <div class="container content">
-          <h1>Test</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+          <h1 class="secondary-h1">{{$page.pageContent.fullTitle}}</h1>
+          <div v-html="stringify($page.pageContent.content)"/>
         </div>
       </section>
     </div>
@@ -22,9 +44,16 @@
 </template>
 
 <script>
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
 export default {
   metaInfo: {
-    title: "About us"
+    title: "Information for Agents"
+  },
+  methods: {
+    stringify(input) {
+      return documentToHtmlString(input);
+    }
   }
 };
 </script>

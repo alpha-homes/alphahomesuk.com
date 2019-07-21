@@ -1,18 +1,33 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-twitter has-vector-illustration"
+    class="hero is-info is-bold has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
       <div class="hero-body-content">
         <div class="content container">
-          <h1 class="title">
-            <slot name="title"/>
+          <h1 class="title homepage-hero-title">
+            We are
+            <span class="hero-logo">
+              <g-image
+                class="hero-logo-image"
+                width="53"
+                src="../../assets/img/logo/v2/emblem-light.png"
+              />Alpha Homes
+            </span>
           </h1>
+
           <SubtitleCarousel :subtitles="taglines"/>
           <p class="text hero-text">
             <slot name="text"/>
+          </p>
+          <p id="learn-more" class="has-text-right">
+            <a
+              v-scroll-to="{el: '#welcome', offset: -170}"
+              id="call-to-action"
+              class="button is-dark is-inverted is-outlined"
+            >Learn More</a>
           </p>
         </div>
       </div>
@@ -49,9 +64,13 @@ export default {
 </script>
 
 <style lang="scss">
+#homepage-hero {
+  background: linear-gradient(141deg, #162d45 0%, #3287f5 71%, #3287f5 100%);
+}
+
 .has-vector-illustration .hero-body-content {
   z-index: 2;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0px 2px $primary;
 
   @media screen and (min-width: 600px) {
     max-width: 600px;
@@ -68,13 +87,13 @@ export default {
   height: 100%;
   position: absolute;
   left: 0;
-  top: -20px;
+  top: -3vh;
   @include mobile {
-    top: -40px;
+    top: -50px;
   }
   right: 0;
   bottom: 0;
-  background-size: 65% auto;
+  background-size: 70% auto;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -82,9 +101,6 @@ export default {
 }
 
 #homepage-hero .hero-text {
-  position: relative;
-  top: 100px;
-
   @media screen and (max-width: 320px) {
     font-size: 0.8em;
   }
@@ -101,7 +117,47 @@ export default {
   .hero-body {
     // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    margin-top: -52px;
+    // margin-top: -52px;
+    @include mobile {
+      // margin-top: -100px;
+    }
+  }
+  .hero-logo {
+    margin-right: 0;
+    font-weight: 700;
+    font-size: 1.25em;
+    letter-spacing: 0px;
+    @include mobile {
+      position: relative;
+      top: -5px;
+      display: block;
+      letter-spacing: -1px;
+    }
+  }
+
+  .title.homepage-hero-title {
+    overflow: visible;
+    margin-right: 0;
+    @include mobile {
+      // font-size: 1.25em;
+      letter-spacing: 0;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 1.8em;
+    }
+    margin-bottom: 10px;
+  }
+
+  .hero-logo-image {
+    height: 53px;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    margin-right: 5px;
+    @include mobile {
+      height: 42px;
+      top: 8px;
+    }
   }
 }
 </style>
