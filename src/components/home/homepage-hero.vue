@@ -10,11 +10,7 @@
           <h1 class="title homepage-hero-title">
             We are
             <span class="hero-logo">
-              <g-image
-                class="hero-logo-image"
-                width="53"
-                src="../../assets/img/logo/v2/emblem-light.png"
-              />Alpha Homes
+              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.png">Alpha Homes
             </span>
           </h1>
 
@@ -150,6 +146,7 @@ export default {
 
   .hero-logo-image {
     height: 53px;
+    width: auto;
     display: inline-block;
     position: relative;
     top: 12px;
