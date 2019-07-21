@@ -1,14 +1,17 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-twitter has-vector-illustration"
+    class="hero is-info is-bold has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
       <div class="hero-body-content">
         <div class="content container">
           <h1 class="title">
-            <slot name="title"/>
+            We are
+            <span class="hero-logo">
+              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.svg">Alpha Homes
+            </span>
           </h1>
           <SubtitleCarousel :subtitles="taglines"/>
           <p class="text hero-text">
@@ -49,9 +52,13 @@ export default {
 </script>
 
 <style lang="scss">
+.hero.is-bold.has-vector-illustration {
+  background: linear-gradient(141deg, #162d45 0%, #3287f5 71%, #3287f5 100%);
+}
+
 .has-vector-illustration .hero-body-content {
   z-index: 2;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0px 2px $primary;
 
   @media screen and (min-width: 600px) {
     max-width: 600px;
@@ -68,9 +75,9 @@ export default {
   height: 100%;
   position: absolute;
   left: 0;
-  top: -20px;
+  top: -3vh;
   @include mobile {
-    top: -40px;
+    top: -3vh;
   }
   right: 0;
   bottom: 0;
@@ -101,7 +108,20 @@ export default {
   .hero-body {
     // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    margin-top: -52px;
+    margin-top: -80px;
+  }
+  .hero-logo {
+    font-weight: 700;
+    font-size: 1.25em;
+    letter-spacing: -2px;
+  }
+
+  .hero-logo-image {
+    height: 53px;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    margin-right: 5px;
   }
 }
 </style>

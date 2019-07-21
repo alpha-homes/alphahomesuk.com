@@ -44,9 +44,9 @@ export default {
     display: inline;
     position: absolute;
     left: 0;
-    top: 44px;
+    top: 64px;
     @media screen and (max-width: 320px) {
-      top: 80px;
+      top: 90px;
       font-size: 0.8em;
     }
   }

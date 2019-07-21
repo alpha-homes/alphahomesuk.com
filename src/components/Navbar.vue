@@ -1,12 +1,12 @@
 <template>
   <nav
-    class="navbar ah-navbar is-bold is-primary-dark is-fixed-top"
+    class="navbar ah-navbar is-primary is-fixed-top has-navbar-shadow"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
       <g-link class="navbar-item navbar-logo-item" to="/" exact>
-        <img alt="Alpha Homes" src="../assets/img/logo/v2/nobg-long-light.svg" class="navbar-logo">
+        <img alt="Alpha Homes" src="../assets/img/logo/v2/logo-full.svg" class="navbar-logo">
       </g-link>
 
       <a
@@ -90,13 +90,16 @@ export default {
 .navbar-item.navbar-logo-item {
   // padding: 0;
 }
-.navbar-logo {
+img.navbar-logo {
   width: auto;
-  height: 36px;
+  height: 40px;
 }
 .ah-navbar {
   font-family: $ah-header;
   font-size: 0.9em;
+}
+.navbar.has-navbar-shadow {
+  box-shadow: 0 2px 2px 2px #162d45;
 }
 </style>
 
