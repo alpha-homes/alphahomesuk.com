@@ -23,7 +23,7 @@ query {
         <i class="far fa-copyright has-text-grey"></i>
         <span class="year has-text-grey-dark">2019</span>
         <g-image
-          src="~/assets/img/logo/logo-full-transparent-dark.svg"
+          src="~/assets/img/logo/v2/nobg-long-dark.svg"
           id="alphahomes-footer-logo"
           width="180px"
           class="inline-image"
