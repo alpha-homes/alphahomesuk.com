@@ -101,7 +101,7 @@ img.navbar-logo {
   font-size: 0.9em;
 }
 .navbar.has-navbar-shadow {
-  box-shadow: 0 2px 2px 2px #162d45;
+  // box-shadow: 0 2px 2px 2px #162d45;
 }
 
 nav#ah-navbar {
