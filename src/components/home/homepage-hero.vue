@@ -77,18 +77,18 @@ export default {
 
 .has-vector-illustration .hero-background {
   background-image: url("../../assets/img/home/family-outside-home.svg");
-  margin: 52px 0px 0px;
+  margin: 0px 0px 0px;
   padding: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
-  top: -3vh;
-  @include mobile {
-    top: -50px;
-  }
+  // top: -3vh;
+  // @include mobile {
+  //   top: -50px;
+  // }
   right: 0;
-  bottom: 0;
+  bottom: -3vh;
   background-size: 70% auto;
   background-repeat: no-repeat;
   background-position-x: right;
