@@ -97,7 +97,7 @@ export default {
 }
 
 #homepage-hero .hero-text {
-  @media screen and (max-width: 320px) {
+  @include mobile {
     font-size: 0.8em;
   }
 }
