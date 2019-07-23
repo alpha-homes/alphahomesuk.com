@@ -1,3 +1,11 @@
+<static-query>
+query {
+    basics: contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
+  	  landlordLoginURL
+  }
+}
+</static-query>
+
 <template>
   <nav
     id="ah-navbar"
@@ -43,7 +51,11 @@
         <g-link to="/local-authorities" class="navbar-item">Local Authorities</g-link>
         <div class="navbar-item">
           <div class="buttons">
-            <a href="/landlord-login" target="_blank" class="button is-dark is-inverted is-rounded">
+            <a
+              :href="$static.basics.landlordLoginURL"
+              target="_blank"
+              class="button is-dark is-inverted is-rounded"
+            >
               <!-- TODO: change landlord login link -->
               <span class="icon">
                 <i class="fas fa-key has-text-brown"></i>

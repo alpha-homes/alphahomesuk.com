@@ -68,7 +68,7 @@ export default {
 }
 
 .has-vector-illustration .hero-body-content {
-  z-index: 2;
+  z-index: 3;
   text-shadow: 0 0px 2px $primary;
 
   @media screen and (min-width: 600px) {
@@ -112,16 +112,9 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 52px;
   left: 0;
   right: 0;
-  bottom: -3vh;
-  background-size: 60% auto;
-  @include mobile {
-    background-size: 80% auto;
-  }
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
   z-index: 1;
   background: linear-gradient(
     141deg,
