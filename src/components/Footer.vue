@@ -133,7 +133,7 @@ export default {
 }
 
 .inline-image#alphahomes-footer-logo {
-  top: 16px;
+  top: 10px;
   margin: 0 5px;
   filter: opacity(0.66);
 }

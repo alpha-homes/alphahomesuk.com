@@ -36,7 +36,7 @@ query {
       <section class="section is-medium">
         <div class="container content">
           <h1 class="secondary-h1">{{$page.pageContent.fullTitle}}</h1>
-          <div v-html="stringify($page.pageContent.content)"/>
+          <div v-html="stringify($page.pageContent.content)" />
         </div>
       </section>
     </div>
@@ -48,7 +48,7 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
-    title: "Property Management"
+    title: "Guaranteed Rent"
   },
   methods: {
     stringify(input) {
