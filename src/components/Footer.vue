@@ -17,13 +17,13 @@ query {
 </static-query>
 
 <template>
-  <footer class="footer">
+  <footer class="footer has-text-dark">
     <div class="content has-text-centered has-text-dark">
       <p id="license">
         <i class="far fa-copyright has-text-grey"></i>
         <span class="year has-text-grey-dark">2019</span>
         <g-image
-          src="~/assets/img/logo/logo-full-transparent-dark.svg"
+          src="~/assets/img/logo/v3/nobg-long-dark.svg"
           id="alphahomes-footer-logo"
           width="180px"
           class="inline-image"
@@ -33,7 +33,15 @@ query {
       <section id="legal" class="has-text-grey is-size-7">
         <p
           id="company-info"
-        >ALPHA HOMES LIMITED (company number {{$static.basics.companyNumber }}) incorporated in England and Wales. Registered business address: {{$static.basics.businessAddress}}.</p>
+        >ALPHA HOMES LIMITED is a limited liability company incorporated in England and Wales.</p>
+        <p id="company-number">
+          Company Number:
+          <span class="is-bold">{{$static.basics.companyNumber }}</span>
+        </p>
+        <p id="registered-business-address">
+          Registered business address:
+          <span class="is-italic">{{$static.basics.businessAddress}}.</span>
+        </p>
       </section>
       <p id="credits">
         <span id="rstlss" class="is-size-7 has-text-grey-dark">
@@ -105,7 +113,13 @@ export default {
 
 .footer #credits {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   cursor: pointer;
+  filter: opacity(0.75);
+  a {
+    font-weight: 300;
+    font-style: oblique;
+  }
 }
 
 .inline-image {
@@ -119,7 +133,18 @@ export default {
 }
 
 .inline-image#alphahomes-footer-logo {
-  top: 9px;
+  top: 16px;
   margin: 0 5px;
+  filter: opacity(0.66);
+}
+
+.footer #legal {
+  margin-top: 20pt;
+}
+
+#company-info,
+#registered-business-address,
+#company-number {
+  margin: 0;
 }
 </style>

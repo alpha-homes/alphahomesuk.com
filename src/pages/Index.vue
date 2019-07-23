@@ -25,52 +25,74 @@ query {
 
 <template>
   <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+    <div id="homepage-container">
+      <HomepageHero
+        size="fullheight"
+        :taglines="[
+          this.$page.basics.tagline,
+          ...this.$page.basics.altTaglines
+        ]"
+      >
+        <template v-slot:title>We are Alpha Homes</template>
+        <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
+      </HomepageHero>
 
-    <HomepageHero size="fullheight" :taglines="taglines">
-      <template v-slot:title>We are Alpha Homes</template>
-      <template v-slot:text>{{$page.pageContent.shortSummary}}</template>
-    </HomepageHero>
-
-    <section class="section">
-      <div class="columns">
-        <div class="column is-12">
-          <section class="container content">
-            <h1 id="information">{{$page.pageContent.fullTitle}}</h1>
-            <p v-html="content"/>
-          </section>
+      <section class="section is-medium">
+        <div class="columns">
+          <div class="column is-12">
+            <section class="container content">
+              <div id="information">
+                <h1 class="has-text-centered" id="welcome">{{$page.pageContent.fullTitle}}</h1>
+                <div id="homepage-content" v-html="stringify($page.pageContent.content)"/>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="section is-medium">
+        <section class="container has-text-grey">
+          <p class="is-size-6 has-text-centered">
+            <a href="/services">Click here</a> to learn more about the services we can provide for you, or
+            <a
+              href="/contact"
+            >click here to get in contact with us.</a>
+          </p>
+        </section>
+      </section>
+    </div>
   </Layout>
 </template>
 
 <script>
-import HomepageHero from "~/components/homepage-hero.vue";
+import HomepageHero from "~/components/home/homepage-hero.vue";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
-    title: "Alpha Homes - London Property Specialists Since 2008"
+    title: "London Property Specialists Since 2008"
   },
   components: {
     HomepageHero
   },
-  computed: {
-    taglines() {
-      const result = [
-        this.$page.basics.tagline,
-        ...this.$page.basics.altTaglines
-      ];
-      // console.log(result);
-      return result;
-    },
-    content() {
-      return documentToHtmlString(this.$page.pageContent.content);
+  methods: {
+    stringify(input) {
+      return documentToHtmlString(input);
     }
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+#homepage-container {
+  h1#welcome {
+    margin-bottom: 1em;
+  }
+
+  #homepage-content {
+    p:first-child {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 {
   "name": "alphahomesuk.com",
-  "version": "0.3.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -10,18 +10,23 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.1.0",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/source-contentful": "^0.4.0",
-    "buefy": "^0.7.8",
+    "buefy": "^0.7.10",
     "bulma-carousel": "^4.0.4",
     "bulmaswatch": "^0.7.2",
-    "gridsome": "^0.6.0",
-    "lodash": "^4.17.14",
+    "emailjs-com": "^2.3.2",
+    "gridsome": "^0.6.6",
+    "lodash": "^4.17.15",
+    "mailgun-js": "^0.22.0",
     "node-sass": "^4.12.0",
     "rxjs": "^6.5.2",
     "sass-loader": "^7.1.0",
     "vue-carousel": "^0.18.0",
     "vue-cookie-accept-decline": "^5.2.3",
+    "vue-recaptcha": "^1.2.0",
     "vue-rx": "^6.2.0",
+    "vue-scrollto": "^2.15.0",
     "vue2-animate": "^2.1.0"
   },
   "devDependencies": {

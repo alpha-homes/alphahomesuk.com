@@ -30,17 +30,23 @@ module.exports = {
       use: "@gridsome/source-contentful",
       options: {
         space: "nkx1492d8hke", // required
-        accessToken: "chm5AdZS4mmLjwXPoWS9eL4DrpnkfRb6oGspKa2IQL0", // required
+        accessToken: "yhT80FS9Jo7maPg-08dsaze9HMU97_zzf5k-XSmOfTM", // required
         host: "cdn.contentful.com",
         environment: "master",
         typeName: "Contentful"
+      }
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-144198537-1"
       }
     }
   ],
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
-
+    config.mode("development");
     types.forEach(type => {
       addStyleResource(config.module.rule("sass").oneOf(type));
     });

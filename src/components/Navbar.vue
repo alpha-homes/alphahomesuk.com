@@ -1,13 +1,14 @@
 <template>
   <nav
-    class="navbar ah-navbar is-primary-dark is-fixed-top"
+    id="ah-navbar"
+    class="navbar ah-navbar is-primary is-fixed-top has-navbar-shadow"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <a class="navbar-item navbar-logo-item" href="/">
-        <g-image src="~/assets/img/logo/logo-full-transparent.svg" class="navbar-logo"/>
-      </a>
+      <g-link class="navbar-item navbar-logo-item" to="/" exact>
+        <img alt="Alpha Homes" src="../assets/img/logo/v3/logo-full.svg" class="navbar-logo" />
+      </g-link>
 
       <a
         role="button"
@@ -28,36 +29,35 @@
       <div class="navbar-start"></div>
 
       <div class="navbar-end">
-        <a class="navbar-item is-hidden-desktop">Home</a>
-
-        <a class="navbar-item">About</a>
+        <g-link to="/about" class="navbar-item">About</g-link>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">Services</a>
+          <g-link to="/services" class="navbar-link" exact>Services</g-link>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">Property Management</a>
-            <a class="navbar-item">Guaranteed Rent</a>
+            <g-link to="/services/property-management" class="navbar-item">Property Management</g-link>
+            <g-link to="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</g-link>
           </div>
         </div>
-        <a class="navbar-item">Landlords</a>
-        <a class="navbar-item">Tenants</a>
-        <a class="navbar-item">Agents</a>
+        <g-link to="/landlords" class="navbar-item">Landlords</g-link>
+        <g-link to="/tenants" class="navbar-item">Tenants</g-link>
+        <g-link to="/agents" class="navbar-item">Agents</g-link>
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-light">
+            <a href="/landlord-login" target="_blank" class="button is-dark is-inverted is-rounded">
+              <!-- TODO: change landlord login link -->
               <span class="icon">
-                <i class="fas fa-key"></i>
+                <i class="fas fa-key has-text-brown"></i>
               </span>
               <span>Landlord Login</span>
             </a>
-            <a class="button is-success" href="mailto:info@alphahomesuk.com">
+            <g-link to="/contact" class="button is-green is-rounded">
               <span class="icon">
                 <i class="fas fa-comments"></i>
               </span>
               <span>
                 <strong>Contact Us</strong>
               </span>
-            </a>
+            </g-link>
           </div>
         </div>
       </div>
@@ -92,13 +92,23 @@ export default {
 .navbar-item.navbar-logo-item {
   // padding: 0;
 }
-.navbar-logo {
+img.navbar-logo {
   width: auto;
-  height: 36px;
+  height: 40px;
 }
 .ah-navbar {
   font-family: $ah-header;
   font-size: 0.9em;
+}
+.navbar.has-navbar-shadow {
+  // box-shadow: 0 2px 2px 2px #162d45;
+}
+
+nav#ah-navbar {
+  a {
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
 }
 </style>
 
