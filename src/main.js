@@ -24,7 +24,7 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href:
-      "https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Martel:200,300,400,600,700,800,900|Playfair+Display:400,400i,700&display=swap"
+      "https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Martel:200,300,400,600,700,800,900|Playfair+Display:400,400i,700|Comfortaa:300,400,500,600,700&display=swap"
   });
 
   head.htmlAttrs = { class: "has-navbar-fixed-top" };
