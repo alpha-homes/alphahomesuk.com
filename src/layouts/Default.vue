@@ -1,13 +1,13 @@
 <template>
   <div id="main-wrapper">
-    <Navbar/>
+    <Navbar />
     <div id="content-container">
       <transition name="quickfade" appear>
         <main>
-          <slot/>
+          <slot />
         </main>
       </transition>
-      <Footer/>
+      <Footer />
     </div>
   </div>
 </template>
@@ -26,6 +26,12 @@ export default {
 
 <style lang="scss">
 @import "~/assets/sass/style.scss";
+
+html.has-navbar-fixed-top,
+body.has-navbar-fixed-top {
+  padding-top: 50px !important;
+}
+
 // body {
 //   background-color: $ah-blue;
 // }
