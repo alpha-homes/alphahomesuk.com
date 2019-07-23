@@ -141,7 +141,11 @@ export default {
       position: relative;
       top: -5px;
       display: block;
-      letter-spacing: -1px;
+      letter-spacing: 3pt;
+      .alpha,
+      .homes {
+        top: 0px;
+      }
     }
   }
 
