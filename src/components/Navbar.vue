@@ -40,7 +40,7 @@
         </div>
         <g-link to="/landlords" class="navbar-item">Landlords</g-link>
         <g-link to="/tenants" class="navbar-item">Tenants</g-link>
-        <g-link to="/agents" class="navbar-item">Agents</g-link>
+        <g-link to="/local-authorities" class="navbar-item">Local Authorities</g-link>
         <div class="navbar-item">
           <div class="buttons">
             <a href="/landlord-login" target="_blank" class="button is-dark is-inverted is-rounded">
