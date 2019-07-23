@@ -10,13 +10,15 @@
           <h1 class="title homepage-hero-title">
             We are
             <span class="hero-logo">
-              <img class="hero-logo-image" src="../../assets/img/logo/v2/emblem-light.svg">Alpha Homes
+              <img class="hero-logo-image" src="../../assets/img/logo/v3/emblem-light.svg" />
+              <span class="alpha">Alpha</span>
+              <span class="homes">Homes</span>
             </span>
           </h1>
 
-          <SubtitleCarousel :subtitles="taglines"/>
+          <SubtitleCarousel :subtitles="taglines" />
           <p class="text hero-text">
-            <slot name="text"/>
+            <slot name="text" />
           </p>
           <p id="learn-more" class="has-text-right">
             <a
@@ -87,6 +89,7 @@ export default {
   // @include mobile {
   //   top: -50px;
   // }
+
   right: 0;
   bottom: -3vh;
   background-size: 70% auto;
@@ -119,10 +122,21 @@ export default {
     }
   }
   .hero-logo {
+    font-family: $ah-logo;
+    text-transform: uppercase;
     margin-right: 0;
     font-weight: 700;
-    font-size: 1.25em;
-    letter-spacing: 0px;
+    font-size: 0.9em;
+    letter-spacing: 10pt;
+    .alpha {
+      margin: 0 9pt 0 6pt;
+    }
+
+    .alpha,
+    .homes {
+      position: relative;
+      top: 2px;
+    }
     @include mobile {
       position: relative;
       top: -5px;
@@ -149,7 +163,7 @@ export default {
     width: auto;
     display: inline-block;
     position: relative;
-    top: 12px;
+    top: 16px;
     margin-right: 5px;
     @include mobile {
       height: 42px;

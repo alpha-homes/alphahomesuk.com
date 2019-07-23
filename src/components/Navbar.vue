@@ -7,7 +7,7 @@
   >
     <div class="navbar-brand">
       <g-link class="navbar-item navbar-logo-item" to="/" exact>
-        <img alt="Alpha Homes" src="../assets/img/logo/v2/logo-full.svg" class="navbar-logo">
+        <img alt="Alpha Homes" src="../assets/img/logo/v3/logo-full.svg" class="navbar-logo" />
       </g-link>
 
       <a
