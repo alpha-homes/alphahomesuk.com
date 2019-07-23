@@ -24,11 +24,12 @@
             <a
               v-scroll-to="{el: '#welcome', offset: -170}"
               id="call-to-action"
-              class="button is-dark is-inverted is-outlined"
+              class="button is-info"
             >Learn More</a>
           </p>
         </div>
       </div>
+      <div class="hero-background-gradient-overlay"></div>
       <div class="hero-background"></div>
     </div>
 
@@ -84,13 +85,13 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
+
   // top: -3vh;
   // @include mobile {
   //   top: -50px;
   // }
 
-  right: 0;
+  right: -4vw;
   bottom: -3vh;
   background-size: 70% auto;
   background-repeat: no-repeat;
@@ -103,6 +104,32 @@ export default {
   @include mobile {
     font-size: 0.8em;
   }
+}
+
+#homepage-hero .hero-background-gradient-overlay {
+  margin: 0px 0px 0px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3vh;
+  background-size: 60% auto;
+  @include mobile {
+    background-size: 80% auto;
+  }
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  z-index: 1;
+  background: linear-gradient(
+    141deg,
+    rgba(22, 45, 69, 1) 0%,
+    rgba(50, 135, 245, 0.1) 50%,
+    rgba(50, 135, 245, 0) 71%,
+    rgba(50, 135, 245, 0) 100%
+  );
 }
 
 #homepage-hero {
