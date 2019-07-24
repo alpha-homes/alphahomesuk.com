@@ -88,7 +88,7 @@ export default {
   //   top: -50px;
   // }
 
-  right: -4vw;
+  right: 0;
   bottom: -3vh;
   background-size: 70% auto;
   background-repeat: no-repeat;
