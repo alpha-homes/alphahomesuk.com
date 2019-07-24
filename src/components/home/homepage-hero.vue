@@ -8,11 +8,11 @@
       <div class="hero-body-content">
         <div class="content container">
           <h1 class="title homepage-hero-title">
-            We are
+            Hello, we are
             <span class="hero-logo">
-              <img class="hero-logo-image" src="../../assets/img/logo/v3/emblem-light.svg" />
-              <span class="alpha">Alpha</span>
-              <span class="homes">Homes</span>
+              <img class="hero-logo-image" src="../../assets/img/logo/v3/logo-full.svg" />
+              <!-- <span class="alpha">Alpha</span>
+              <span class="homes">Homes</span>-->
             </span>
           </h1>
 
@@ -71,9 +71,6 @@ export default {
   z-index: 3;
   text-shadow: 0 0px 2px $primary;
 
-  @media screen and (min-width: 600px) {
-    max-width: 600px;
-  }
   padding-left: 2vw;
   // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -172,6 +169,9 @@ export default {
   .title.homepage-hero-title {
     overflow: visible;
     margin-right: 0;
+    font-family: $ah-header;
+    font-weight: 300;
+    font-style: oblique;
     @include mobile {
       // font-size: 1.25em;
       letter-spacing: 0;
@@ -179,18 +179,19 @@ export default {
     @media screen and (max-width: 320px) {
       font-size: 1.8em;
     }
+    font-size: 1.5em;
     margin-bottom: 10px;
   }
 
   .hero-logo-image {
-    height: 53px;
+    height: 64px;
     width: auto;
     display: inline-block;
     position: relative;
-    top: 16px;
-    margin-right: 5px;
+    top: 20px;
+    // margin-right: 5px;
     @include mobile {
-      height: 42px;
+      height: 64px;
       top: 8px;
     }
   }
