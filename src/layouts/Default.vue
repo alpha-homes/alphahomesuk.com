@@ -29,7 +29,7 @@ export default {
 
 html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
-  // padding-top: 50px !important;
+  padding-top: 51px !important;
 }
 
 .quickfade-enter-active {
@@ -42,9 +42,9 @@ body.has-navbar-fixed-top {
 
 h1.secondary-h1,
 .content h1.secondary-h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 1.6em;
-  text-align: center;
+  // text-align: center;
 }
 
 #generic-container .hero h1 {

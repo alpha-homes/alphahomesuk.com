@@ -37,18 +37,19 @@ query {
       <div class="navbar-start"></div>
 
       <div class="navbar-end">
-        <g-link to="/about" class="navbar-item">About</g-link>
+        <!-- <g-link to="/about" class="navbar-item">About</g-link> -->
         <div class="navbar-item has-dropdown is-hoverable">
           <g-link to="/services" class="navbar-link" exact>Services</g-link>
 
           <div class="navbar-dropdown">
             <g-link to="/services/property-management" class="navbar-item">Property Management</g-link>
             <g-link to="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</g-link>
+            <g-link to="/services/tenant-finding" class="navbar-item">Tenant Finding</g-link>
           </div>
         </div>
         <g-link to="/landlords" class="navbar-item">Landlords</g-link>
         <g-link to="/tenants" class="navbar-item">Tenants</g-link>
-        <g-link to="/local-authorities" class="navbar-item">Local Authorities</g-link>
+        <!-- <g-link to="/local-authorities" class="navbar-item">Local Authorities</g-link> -->
         <div class="navbar-item">
           <div class="buttons">
             <a
