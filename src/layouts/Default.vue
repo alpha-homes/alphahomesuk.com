@@ -29,20 +29,8 @@ export default {
 
 html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
-  padding-top: 50px !important;
+  // padding-top: 50px !important;
 }
-
-// body {
-//   background-color: $ah-blue;
-// }
-
-// .hero {
-//   background-color: white;
-// }
-
-// section.section {
-//   background-color: #fff;
-// }
 
 .quickfade-enter-active {
   transition: opacity 0.33s ease-in;
@@ -51,6 +39,7 @@ body.has-navbar-fixed-top {
 .quickfade-enter {
   opacity: 0;
 }
+
 h1.secondary-h1,
 .content h1.secondary-h1 {
   font-size: 2em;

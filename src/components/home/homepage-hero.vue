@@ -6,31 +6,38 @@
   >
     <div class="hero-body">
       <div class="hero-body-content">
-        <div class="content container">
-          <h1 class="title homepage-hero-title">
-            Hello, we are
-            <span class="hero-logo">
-              <img class="hero-logo-image" src="../../assets/img/logo/v3/logo-full.svg" />
-              <!-- <span class="alpha">Alpha</span>
-              <span class="homes">Homes</span>-->
-            </span>
-          </h1>
+        <div class="hero-body-content-inner">
+          <div class="content container">
+            <h1 class="title homepage-hero-title">
+              Hello, we are
+              <span class="hero-logo">
+                <img class="hero-logo-image" src="../../assets/img/logo/v3/logo-full.svg" />
+              </span>
+            </h1>
 
-          <SubtitleCarousel :subtitles="taglines" />
-          <p class="text hero-text">
-            <slot name="text" />
-          </p>
-          <p id="learn-more" class="has-text-right">
-            <a
-              v-scroll-to="{el: '#welcome', offset: -170}"
-              id="call-to-action"
-              class="button is-info"
-            >Learn More</a>
-          </p>
+            <SubtitleCarousel :subtitles="taglines" />
+            <div class="short-summary-and-call-to-action">
+              <p class="text hero-text">
+                <slot name="text" />
+              </p>
+
+              <p id="learn-more" class="has-text-right">
+                <a
+                  v-scroll-to="{el: '#welcome', offset: -170}"
+                  id="call-to-action"
+                  class="button is-inverted"
+                >Learn More</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero-background-gradient-overlay"></div>
-      <div class="hero-background"></div>
+      <div class="hero-background">
+        <div class="hero-illustration">
+          <img class="hero-illustration-image" src="../../assets/img/home/family-outside-home.svg" />
+        </div>
+      </div>
     </div>
 
     <div class="hero-foot"></div>
@@ -68,39 +75,56 @@ export default {
 }
 
 .has-vector-illustration .hero-body-content {
+  display: flex;
+  flex-direction: column;
   z-index: 3;
-  text-shadow: 0 0px 2px $primary;
-
-  padding-left: 2vw;
-  // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .has-vector-illustration .hero-background {
-  background-image: url("../../assets/img/home/family-outside-home.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin: 0px 0px 0px;
   padding: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-
-  // top: -3vh;
-  // @include mobile {
-  //   top: -50px;
-  // }
-
   right: 0;
-  bottom: -3vh;
-  background-size: 70% auto;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
+  bottom: 0;
   z-index: 0;
+}
+
+.short-summary-and-call-to-action {
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 55%;
+    max-width: 60rem;
+  }
+}
+
+.hero-illustration {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-illustration-image {
+  height: 35vh;
+  @include desktop {
+    width: 50%;
+    height: auto;
+  }
+  margin-right: 15px;
 }
 
 #homepage-hero .hero-text {
   @include mobile {
     font-size: 0.8em;
   }
+  font-size: 1.1em;
 }
 
 #homepage-hero .hero-background-gradient-overlay {
@@ -123,7 +147,6 @@ export default {
 }
 
 #homepage-hero {
-  // background-image: url("../assets/img/photos/party.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -131,12 +154,7 @@ export default {
   margin-top: -52px;
 
   .hero-body {
-    // background: rgba(0, 0, 0, 0.5);
     padding-top: 0px;
-    // margin-top: -52px;
-    @include mobile {
-      // margin-top: -100px;
-    }
   }
   .hero-logo {
     font-family: $ah-logo;
@@ -173,11 +191,10 @@ export default {
     font-weight: 300;
     font-style: oblique;
     @include mobile {
-      // font-size: 1.25em;
       letter-spacing: 0;
     }
     @media screen and (max-width: 320px) {
-      font-size: 1.8em;
+      font-size: 1.2em;
     }
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -189,7 +206,6 @@ export default {
     display: inline-block;
     position: relative;
     top: 20px;
-    // margin-right: 5px;
     @include mobile {
       height: 64px;
       top: 8px;
