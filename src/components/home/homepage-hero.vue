@@ -32,14 +32,15 @@
           </div>
         </div>
       </div>
-      <div class="hero-background-gradient-overlay"></div>
+    </div>
+    <div class="hero-background-gradient-overlay"></div>
+    <div class="hero-background-wrapper">
       <div class="hero-background">
         <div class="hero-illustration">
           <img class="hero-illustration-image" src="../../assets/img/home/family-outside-home.svg" />
         </div>
       </div>
     </div>
-
     <div class="hero-foot"></div>
   </section>
 </template>
@@ -88,9 +89,9 @@ export default {
   padding: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
   z-index: 0;
 }
 
@@ -151,10 +152,15 @@ export default {
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 0px;
-  margin-top: -52px;
+  margin-top: -50px;
 
   .hero-body {
-    padding-top: 0px;
+    align-items: center;
+    @media screen and (max-width: 480px) {
+      align-items: flex-start;
+      padding-top: 5rem;
+    }
+    padding: 0 1.5rem;
   }
   .hero-logo {
     font-family: $ah-logo;
@@ -210,6 +216,14 @@ export default {
       height: 64px;
       top: 8px;
     }
+  }
+
+  .hero-background-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // top: 52px;
+    left: 0;
   }
 }
 </style>
