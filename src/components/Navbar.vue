@@ -44,7 +44,7 @@ query {
           <div class="navbar-dropdown">
             <g-link to="/services/property-management" class="navbar-item">Property Management</g-link>
             <g-link to="/services/guaranteed-rent" class="navbar-item">Guaranteed Rent</g-link>
-            <g-link to="/services/tenant-finding" class="navbar-item">Tenant Finding</g-link>
+            <g-link to="/services/lettings" class="navbar-item">Lettings</g-link>
           </div>
         </div>
         <g-link to="/landlords" class="navbar-item">Landlords</g-link>
