@@ -152,10 +152,14 @@ export default {
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 0px;
-  // margin-top: -52px;
+  margin-top: -50px;
 
   .hero-body {
     align-items: center;
+    @media screen and (max-width: 480px) {
+      align-items: flex-start;
+      padding-top: 5rem;
+    }
     padding: 0 1.5rem;
   }
   .hero-logo {
