@@ -12,7 +12,7 @@ query {
       companyNumber
       businessAddress
   }
-  pageContent: contentfulPage (id: "7CZM0M5dKv5BfnUGN7NIAn") {
+  pageContent: contentfulPage (id: "55iFglIEHaoLxWLyxUpK4L") {
     name
     fullTitle
     shortSummary
