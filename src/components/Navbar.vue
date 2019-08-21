@@ -2,6 +2,7 @@
 query {
     basics: contentfulBasics (id: "6M3Fw83o4xqKJDHj0mNlc5") {
   	  landlordLoginURL
+      tenantLoginUrl
   }
 }
 </static-query>
@@ -57,7 +58,6 @@ query {
               target="_blank"
               class="button is-dark is-inverted is-rounded"
             >
-              <!-- TODO: change landlord login link -->
               <span class="icon">
                 <i class="fas fa-key has-text-brown"></i>
               </span>
