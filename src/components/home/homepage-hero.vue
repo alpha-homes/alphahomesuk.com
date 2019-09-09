@@ -1,14 +1,14 @@
 <template>
   <section
     id="homepage-hero"
-    class="hero is-info is-bold has-vector-illustration"
+    class="hero is-bold has-vector-illustration"
     :class="{ 'is-fullheight': size === 'fullheight', 'is-large' : size === 'large', 'is-small' : size === 'small'}"
   >
     <div class="hero-body">
       <div class="hero-body-content">
         <div class="hero-body-content-inner">
           <div class="content container">
-            <h1 class="title homepage-hero-title">
+            <h1 class="title homepage-hero-title" style="color: #fff">
               Hello, we are
               <span class="hero-logo">
                 <img class="hero-logo-image" src="../../assets/img/logo/v3/logo-full.svg" />
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="hero-background-gradient-overlay"></div>
+
     <div class="hero-background-wrapper">
       <div class="hero-background">
         <div class="hero-illustration">
@@ -71,10 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-#homepage-hero {
-  background: linear-gradient(141deg, #162d45 0%, #3287f5 71%, #3287f5 100%);
-}
-
 .has-vector-illustration .hero-body-content {
   display: flex;
   flex-direction: column;
@@ -148,9 +144,11 @@ export default {
 }
 
 #homepage-hero {
+  background-image: url("../../assets/img/home/Homepage-BG.svg");
+  color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
   padding-top: 0px;
   margin-top: -50px;
 
