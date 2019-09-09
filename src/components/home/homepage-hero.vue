@@ -75,6 +75,14 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 3;
+  .hero-body-content-inner {
+    @include mobile {
+      padding-left: 0;
+    }
+    @media screen and (min-width: 600px) {
+      padding-left: 10vw;
+    }
+  }
 }
 
 .has-vector-illustration .hero-background {
