@@ -25,17 +25,10 @@ query {
 <template>
   <Layout>
     <div id="generic-container">
-      <section id="services-page-hero" class="hero is-fullheight has-svg-background left">
-        <div class="hero-body">
-          <div class="body-content-padding"></div>
-          <div class="body-content">
-            <div class="content">
-              <h1>{{$page.pageContent.name}}</h1>
-              <p>{{$page.pageContent.shortSummary}}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SVGHero side="left" page="services">
+        <h1>{{$page.pageContent.name}}</h1>
+        <p>{{$page.pageContent.shortSummary}}</p>
+      </SVGHero>
       <section class="section is-medium">
         <div class="container content">
           <h1 class="secondary-h1">{{$page.pageContent.fullTitle}}</h1>
@@ -48,10 +41,14 @@ query {
 
 <script>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import SVGHero from "@/components/svg-hero.vue";
 
 export default {
   metaInfo: {
     title: "Services"
+  },
+  components: {
+    SVGHero
   },
   methods: {
     stringify(input) {
@@ -62,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
-#services-page-hero {
+.services-page-hero {
   background-image: url("../../assets/img/heroes/Services.svg");
 }
 </style>
