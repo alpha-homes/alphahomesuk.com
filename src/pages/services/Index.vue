@@ -25,18 +25,21 @@ query {
 <template>
   <Layout>
     <div id="generic-container">
-      <section class="hero is-medium is-info is-bold">
+      <section id="services-page-hero" class="hero is-fullheight has-svg-background left">
         <div class="hero-body">
-          <div class="container content">
-            <h1>{{$page.pageContent.name}}</h1>
-            <p>{{$page.pageContent.shortSummary}}</p>
+          <div class="body-content-padding"></div>
+          <div class="body-content">
+            <div class="content">
+              <h1>{{$page.pageContent.name}}</h1>
+              <p>{{$page.pageContent.shortSummary}}</p>
+            </div>
           </div>
         </div>
       </section>
       <section class="section is-medium">
         <div class="container content">
           <h1 class="secondary-h1">{{$page.pageContent.fullTitle}}</h1>
-          <div v-html="stringify($page.pageContent.content)"/>
+          <div v-html="stringify($page.pageContent.content)" />
         </div>
       </section>
     </div>
@@ -57,3 +60,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+#services-page-hero {
+  background-image: url("../../assets/img/heroes/Services.svg");
+}
+</style>
