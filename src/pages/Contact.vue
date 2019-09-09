@@ -26,15 +26,11 @@ query {
   <Layout class="contact-page">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <div id="contact-page-container">
-      <section class="hero is-medium is-bold is-green">
-        <div class="hero-body">
-          <div class="content container">
-            <h1 class="title">Contact Us</h1>
-            <h2 class="subtitle">How can we help?</h2>
-            <p>{{$page.pageContent.shortSummary}}</p>
-          </div>
-        </div>
-      </section>
+      <SVGHero side="right" page="contact">
+        <h1 style="color: #fff;">Contact Us</h1>
+        <h2 style="color: #fff;">How can we help?</h2>
+        <p>{{$page.pageContent.shortSummary}}</p>
+      </SVGHero>
       <section class="section">
         <div class="container">
           <div class="columns is-4">
@@ -43,11 +39,11 @@ query {
                 class="title is-size-4 homepage-hero-title"
                 id="information"
               >{{$page.pageContent.fullTitle}}</h1>
-              <ContactForm/>
+              <ContactForm />
             </div>
             <div class="column is-4">
               <div class="other-ways content">
-                <div v-html="stringify($page.pageContent.content)"/>
+                <div v-html="stringify($page.pageContent.content)" />
                 <h2>by Post</h2>
                 <p>Need to send us something the old fashioned way?</p>
 
@@ -69,13 +65,15 @@ query {
 <script>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import ContactForm from "~/components/contact-form.vue";
+import SVGHero from "@/components/svg-hero.vue";
 
 export default {
   metaInfo: {
     title: "Contact Us"
   },
   components: {
-    ContactForm
+    ContactForm,
+    SVGHero
   },
   methods: {
     stringify(input) {
@@ -105,5 +103,9 @@ textarea {
   .other-ways {
     padding-right: 10pt;
   }
+}
+
+.contact-page-hero {
+  background-image: url("../assets/img/heroes/Contact.svg");
 }
 </style>

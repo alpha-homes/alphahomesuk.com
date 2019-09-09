@@ -54,6 +54,9 @@ export default {
     flex-direction: row;
     .body-content-pre {
       flex-basis: 100%;
+      // @include mobile {
+      //   flex-basis: 0;
+      // }
     }
     .body-content-post {
       @include mobile {
@@ -68,7 +71,9 @@ export default {
     }
     .body-content {
       max-width: 55vw;
-
+      @include mobile {
+        max-width: 80vw;
+      }
       // text-justify: distribute;
     }
   }
