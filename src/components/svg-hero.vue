@@ -2,12 +2,13 @@
 <template>
   <section :class="computedClass">
     <div class="hero-body">
-      <div class="body-content-padding"></div>
+      <div class="body-content-pre"></div>
       <div class="body-content">
         <div class="content">
           <slot></slot>
         </div>
       </div>
+      <div class="body-content-post"></div>
     </div>
   </section>
 </template>
@@ -36,18 +37,39 @@ export default {
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
+  flex-direction: row;
   &.left {
-    background-position: 55% 100%;
+    background-position: 40% 100%;
   }
   &.right {
     background-position: 45% 100%;
+    .hero-body {
+      flex-direction: row-reverse;
+    }
   }
 
   .hero-body {
     width: 100%;
     display: flex;
-    .body-content-padding {
+    flex-direction: row;
+    .body-content-pre {
       flex-basis: 100%;
+    }
+    .body-content-post {
+      @include mobile {
+        flex-basis: 0;
+      }
+      @include tablet {
+        flex-basis: 10%;
+      }
+      @include desktop {
+        flex-basis: 25%;
+      }
+    }
+    .body-content {
+      max-width: 55vw;
+
+      // text-justify: distribute;
     }
   }
 }
