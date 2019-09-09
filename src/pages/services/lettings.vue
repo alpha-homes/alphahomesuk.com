@@ -25,14 +25,10 @@ query {
 <template>
   <Layout>
     <div id="generic-container">
-      <section class="hero is-medium is-primary">
-        <div class="hero-body">
-          <div class="container content">
-            <h1>{{$page.pageContent.name}}</h1>
-            <p>{{$page.pageContent.shortSummary}}</p>
-          </div>
-        </div>
-      </section>
+      <SVGHero side="right" page="lettings">
+        <h1>{{$page.pageContent.name}}</h1>
+        <p>{{$page.pageContent.shortSummary}}</p>
+      </SVGHero>
       <section class="section is-medium">
         <div class="container content">
           <h1 class="secondary-h1">{{$page.pageContent.fullTitle}}</h1>
@@ -45,10 +41,14 @@ query {
 
 <script>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import SVGHero from "@/components/svg-hero.vue";
 
 export default {
   metaInfo: {
     title: "Lettings and Tenant Finding"
+  },
+  components: {
+    SVGHero
   },
   methods: {
     stringify(input) {
@@ -57,3 +57,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.lettings-page-hero {
+  background-image: url("../../assets/img/heroes/Lettings.svg");
+}
+</style>
