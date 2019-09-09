@@ -11,6 +11,7 @@
           :key="txt"
           v-show="index === i"
           class="carousel-item"
+          style="color: #fff"
         >{{txt}}</span>
       </transition-group>
     </h2>
