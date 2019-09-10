@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss">
 .hero.is-fullheight.has-svg-background {
-  min-height: 60vh;
+  min-height: 75vh;
 }
 
 .hero.has-svg-background {
@@ -43,6 +43,14 @@ export default {
   background-size: cover;
   flex-direction: row;
   background-position-y: 85%;
+  @include tablet {
+    background-position-y: 100%;
+  }
+
+  @include desktop {
+    background-position-y: 90%;
+  }
+
   &.left {
     background-position-x: 40%;
     text-align: right;
